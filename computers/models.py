@@ -18,5 +18,5 @@ class computer_image(models.Model):
     def __str__(self):
         return self.image
 
-
+"""hallo"""
 
