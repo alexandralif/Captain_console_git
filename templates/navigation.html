@@ -16,6 +16,12 @@
       <ul class="nav navbar-nav">
         <li><a href="{% url 'computers-index' %}">Leikjatölvur <span class="sr-only">(current)</span></a></li>
         <li><a href="{% url 'games-index' %}">Tölvuleikir</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Útskrá</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Innskráning</a></li>
+            <li><a href="{% url 'register' %}">Nýskráning</a></li>
+        {% endif %}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

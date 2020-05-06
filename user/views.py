@@ -4,13 +4,13 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 def register(request):
-    if request.method != 'POST':
-        return render(request, 'user/register.html', {
-            'form': UserCreationForm()
-        })
-    else:
+    if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
-        if form.valid():
+        if form.is_valid():
             form.save()
             return redirect('login')
+    return render(request, 'user/register.html', {
+        'form': UserCreationForm()
+    })
+
 
