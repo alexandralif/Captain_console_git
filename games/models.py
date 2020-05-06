@@ -11,7 +11,7 @@ class games(models.Model):
     game_category = models.ForeignKey(game_category, on_delete=models.CASCADE)
     computer_category = models.ForeignKey(computer_category, on_delete=models.CASCADE)
     onsale = models.BooleanField()
-    description = description = models.CharField(max_length=999, blank=True)
+    description = models.CharField(max_length=999, blank=True)
 
 class games_image(models.Model):
     image = models.CharField(max_length=999)
