@@ -1,9 +1,9 @@
 {%  extends "base.html" %}
 {% block content %}
-    <h3>Tölvuleikir</h3>
-        <div class="games">
+    <h3 class="red">Tölvuleikir</h3>
+    <div class="games">
         {% for game in games %}
             {% include 'games/single_game.html' with game=game %}
         {% endfor %}
-        </div>
+    </div>
 {% endblock %}

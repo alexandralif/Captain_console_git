@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ computers.name }}</h1>
+    <p>{{ computers.description }}</p>
+    <p>{{ computers.price }}kr.</p>
+    {% for computer_image in computers.computer_image_set.all %}
+        <img src="{{ computer_image.image }}" class="computer-img"/>
+    {% endfor %}
+{% endblock %}
