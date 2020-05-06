@@ -1,8 +1,20 @@
 from django.db import models
+from computers.models import computer_category
 
 # Create your models here.
-class Games(models.Model):
+class game_category(models.Model):
     name = models.CharField(max_length=255)
-    logo = models.CharField(max_length=999, blank = True)
-    year_of_start = models.DateTimeField()
 
+class games(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.FloatField()
+    game_category = models.ForeignKey(game_category, on_delete=models.CASCADE)
+    computer_category = models.ForeignKey(computer_category, on_delete=models.CASCADE)
+    onsale = models.BooleanField()
+    description = description = models.CharField(max_length=999, blank=True)
+
+class games_image(models.Model):
+    image = models.CharField(max_length=999)
+    games = models.ForeignKey(games, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.image

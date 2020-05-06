@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f910703-f646-4397-a2a9-fe715d6c2c58" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Captain_console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Captain_console.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/captein_console/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/captein_console/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/computers/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/computers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/computers/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +146,7 @@
       <updated>1587989291198</updated>
       <workItem from="1587989341200" duration="20564000" />
       <workItem from="1588597012910" duration="212000" />
-      <workItem from="1588597424428" duration="10662000" />
+      <workItem from="1588597424428" duration="11584000" />
     </task>
     <servers />
   </component>
@@ -146,6 +154,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="417" y="56" key="#Captain_console" timestamp="1588700016875">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="417" y="56" key="#Captain_console/0.0.1440.900@0.0.1440.900" timestamp="1588700016875" />
     <state x="178" y="79" width="953" height="669" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588589183576">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
