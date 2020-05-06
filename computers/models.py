@@ -19,4 +19,3 @@ class computer_image(models.Model):
         return self.image
 
 
-

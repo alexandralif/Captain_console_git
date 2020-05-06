@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'captein_console.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'agwfuwfy',
-        'USER': 'agwfuwfy',
-        'PASSWORD': 'cc4vst7zzAbIqunFeMwzVTmn8gAbNivd',
+        'NAME': 'gkzrimri',
+        'USER': 'gkzrimri',
+        'PASSWORD': '2_fU_gB9JTBKz1lC0G_E5zCcVgFS0myX',
         'HOST': 'balarama.db.elephantsql.com',
         'PORT': '5432'
     }
