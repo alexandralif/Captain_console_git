@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f910703-f646-4397-a2a9-fe715d6c2c58" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Captain_console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Captain_console.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/captein_console/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/captein_console/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computers/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/computers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/computers/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +75,6 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="captein_console.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -147,6 +140,7 @@
       <workItem from="1587989341200" duration="20564000" />
       <workItem from="1588597012910" duration="212000" />
       <workItem from="1588597424428" duration="11584000" />
+      <workItem from="1588770862746" duration="1253000" />
     </task>
     <servers />
   </component>
