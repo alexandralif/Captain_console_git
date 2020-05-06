@@ -1,15 +1,9 @@
 {%  extends "base.html" %}
 {% block content %}
+    <h3 class="red">Leikjatölvur</h3>
     <div class="computers">
-    <h2>Welcome to the computer app!</h2>
-    </div>
     {% for computer in computers %}
-        {% if computer.price > 1000 %}
-            <p>Expensive!</p>
-        {% else %}
-            <p>Not so expensive!</p>
-        {% endif %}
-        <h4>{{computer.name}}</h4>
-        <p>{{computer.price}}kr.</p>
+        {% include 'computers/single_computer.html' with computer=computer %}
     {% endfor %}
+    </div>
 {% endblock %}

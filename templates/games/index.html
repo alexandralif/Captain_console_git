@@ -1,4 +1,9 @@
 {%  extends "base.html" %}
 {% block content %}
-    <h2>Welcome to the games app!</h2>
+    <h3>Tölvuleikir</h3>
+        <div class="games">
+        {% for game in games %}
+            {% include 'games/single_game.html' with game=game %}
+        {% endfor %}
+        </div>
 {% endblock %}

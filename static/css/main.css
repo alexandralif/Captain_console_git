@@ -77,16 +77,16 @@ a:hover {
     }
 
 }
-.candies {
+.computers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.candy a {
+.computer a {
     color: black !important;
     text-decoration: none;
 }
-.candies .candy {
+.computers .computer {
     border-radius: 0;
     margin: 0;
     background-image: none;
@@ -94,7 +94,7 @@ a:hover {
     text-align: center;
 
 }
-.candies .candy:hover {
+.computers .computer:hover {
     background-image: linear-gradient( #EF626C, #9A27F7), linear-gradient(#6564FF,#2A96Fa),linear-gradient(#2FF89F,#68FF6B);
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom, left bottom;
@@ -103,22 +103,22 @@ a:hover {
     cursor: pointer;
 }
 
-.candies .candie:hover .candy-img {
+.computers .computer:hover .computer-img {
     transform: perspective(400px) scale(1.1) rotateY(15deg);
 
 }
 
-.candy-img {
+.computer-img {
     width: 200px;
     transition: transform 1s ease-in;
 }
 
-.manufacturers {
+.games {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.manufacturer {
+.game {
     display: grid;
     justify-items: center;
     align-items: center;
@@ -126,7 +126,7 @@ a:hover {
     margin: 0;
 }
 
-.manufacturer .manufacturer-img {
+.games .games-img {
     width: 200px;
     height: 200px;
     background-size: contain;
