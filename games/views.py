@@ -9,6 +9,6 @@ def index(request):
 
 def get_game_by_id(request,id):
     return render(request, 'games/game_details.html', {
-        'computers': get_object_or_404(games, pk=id)
+        'games': get_object_or_404(games, pk=id)
     })
 
