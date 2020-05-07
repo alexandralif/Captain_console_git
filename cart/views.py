@@ -1,8 +1,14 @@
 from django.shortcuts import render
 
+from cart.models import Cart
 
 def index(request):
-    return render(request, "cart/index.html")
+    cart = Cart.objects.all()
+    context = {'cart': cart}
+    template = "cart/index.html"
+    return render(request, context, template)
+
+
 
 
 
