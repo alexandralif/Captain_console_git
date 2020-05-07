@@ -44,7 +44,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.captein_console">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="captein_console" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,6 +114,7 @@
       <workItem from="1587989341200" duration="20564000" />
       <workItem from="1588597012910" duration="212000" />
       <workItem from="1588597424428" duration="19969000" />
+      <workItem from="1588780817479" duration="634000" />
     </task>
     <servers />
   </component>
@@ -125,12 +126,20 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="417" y="56" key="#Captain_console/0.0.1440.900@0.0.1440.900" timestamp="1588780577243" />
+    <state x="417" y="23" key="#captein_console" timestamp="1588780916691">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="417" y="23" key="#captein_console/0.23.1440.825@0.23.1440.825" timestamp="1588780916691" />
     <state x="178" y="61" width="953" height="669" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588764498630">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="178" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1588764498630" />
     <state x="178" y="79" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.823@0.23.1440.823" timestamp="1588522588599" />
     <state x="178" y="79" width="953" height="669" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.826@0.23.1440.826" timestamp="1588589183576" />
+    <state x="447" y="226" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588781103673">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="447" y="226" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.825@0.23.1440.825" timestamp="1588781103673" />
     <state x="560" y="139" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog" timestamp="1588586458345">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
