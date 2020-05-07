@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f910703-f646-4397-a2a9-fe715d6c2c58" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Captain_console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Captain_console.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/captein_console/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/captein_console/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/computers/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/computers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/computers/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +50,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -144,6 +152,10 @@
       <workItem from="1588672381264" duration="2806000" />
       <workItem from="1588675402824" duration="1033000" />
       <workItem from="1588683771034" duration="700000" />
+      <workItem from="1588693399773" duration="43000" />
+      <workItem from="1588849444793" duration="336000" />
+      <workItem from="1588849788189" duration="94000" />
+      <workItem from="1588849934970" duration="91000" />
     </task>
     <servers />
   </component>
@@ -168,6 +180,10 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="875" height="438" key="DebuggerActiveHint/0.23.1440.823@0.23.1440.823" timestamp="1588522573149" />
+    <state x="367" y="86" key="FileChooserDialogImpl" timestamp="1588849866136">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="367" y="86" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588849866136" />
     <state width="1358" height="279" key="GridCell.Tab.0.bottom" timestamp="1588594868914">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
@@ -224,9 +240,10 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state width="243" height="457" key="HiddenNamespacesPopup/0.23.1440.826@0.23.1440.826" timestamp="1588589033794" />
-    <state x="392" y="23" key="SettingsEditor" timestamp="1588586503555">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="284" y="0" key="SettingsEditor" timestamp="1588849491019">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="284" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1588849491019" />
     <state x="392" y="23" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1588586503555" />
     <state x="379" y="170" width="670" height="678" key="search.everywhere.popup" timestamp="1588587185908">
       <screen x="0" y="23" width="1440" height="825" />
