@@ -4,7 +4,7 @@
     <p>{{ games.description }}</p>
     <p>{{ games.price }} kr.</p>
     {% for games_image in games.games_image_set.all %}
-        <img src="{{ games_image.image }}" class="games-img"/>
+        <img src="{{ games_image.image }}" class="computer-img"/>
     {% endfor %}
 {% endblock %}
 
