@@ -1,3 +1,147 @@
-.computers{
-    border-bottom: solid 2px rgba(155, 155, 155, .5);
+
+.navbar {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-brand {
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+h1, h2 ,h3 ,h4 ,h5 ,h6 {
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+#navbar-animation {
+    position: absolute;
+    top: -1000px;
+    bottom: -1000px;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to right,#EF626C,#84DCCF);
+    animation: animate-navbar 3s linear infinite alternate;
+
+}
+
+a {
+    color: #9A27F7 !important;
+
+}
+
+a:hover {
+    background-image: linear-gradient(#EF626C,#9A27F7);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    animation: line-under .5s 1 both;
+}
+@keyframes line-under {
+    0% {
+        background-size: 0px 3px;
+    }
+    100% {
+        background-size: 100% 3px;
+    }
+
+}
+@keyframes animate-navbar {
+     0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotateZ(180deg);
+
+    }
+}
+
+@keyframes circle-around {
+    0% {
+        background-size: 0 3px,3px 0, 0 3px, 3px 0;
+    }
+    25% {
+        background-size: 100% 3px,3px 0, 0 3px, 3px 0;
+    }
+    50% {
+        background-size: 100% 3px,3px 100%, 0 3px, 3px 0;
+    }
+    75% {
+        background-size: 100% 3px,3px 100%, 100% 3px, 3px 0;
+    }
+    100% {
+        background-size: 100% 3px,3px 100%, 100% 3px, 3px 100%;
+    }
+
+}
+.computers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.computer a {
+    color: black !important;
+    text-decoration: none;
+}
+.computers .computer {
+    border-radius: 0;
+    margin: 0;
+    background-image: none;
+    background-color: white;
+    text-align: center;
+
+}
+.computers .computer:hover {
+    background-image: linear-gradient( #EF626C, #9A27F7), linear-gradient(#6564FF,#2A96Fa),linear-gradient(#2FF89F,#68FF6B);
+    background-repeat: no-repeat;
+    background-position: left top, right top, right bottom, left bottom;
+    background-size: 0 3px, 3px 0,0 3px, 3px 0;
+    animation: circle-around .5s ease-in both;
+    cursor: pointer;
+}
+
+.computers .computer:hover .computer-img {
+    transform: perspective(400px) scale(1.1) rotateY(15deg);
+
+}
+
+.computer-img {
+    width: 200px;
+    transition: transform 1s ease-in;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.game {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 0;
+    margin: 0;
+}
+
+.games .games-img {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.block {
+    display: block;
+}
+
+.profile-image {
+    position: relative;
+    width:  50px;
+    height: 50px;
+    float: right;
+    border-radius: 50%;
 }

@@ -11,12 +11,14 @@ class computers(models.Model):
     category = models.ForeignKey(computer_category, on_delete=models.CASCADE)
     price = models.FloatField()
     on_sale = models.BooleanField()
+    def __str__(self):
+        return self.name
+
 
 class computer_image(models.Model):
     image = models.CharField(max_length=999)
     computers = models.ForeignKey(computers, on_delete=models.CASCADE)
     def __str__(self):
         return self.image
-
 
 

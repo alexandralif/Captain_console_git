@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f910703-f646-4397-a2a9-fe715d6c2c58" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Captain_console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Captain_console.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -11,6 +12,12 @@
       <change beforePath="$PROJECT_DIR$/computers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/computers/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/games/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/models.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/Captain_console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Captain_console.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/games/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/games/index.html" afterDir="false" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +48,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="ToolWindowStructure.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Captain_Console" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -50,6 +63,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -58,6 +72,24 @@
     </key>
   </component>
   <component name="RunManager" selected="Django Server.Captain_console">
+=======
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Django Server.captein_console">
+=======
+<<<<<<< HEAD
+  <component name="RunManager" selected="Django Server.captein_console">
+=======
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Captain_Console" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django Server.Captain_console">
+>>>>>>> 06cb557861f9fe65270831c58087549d60f701db
+>>>>>>> 33f25bc8f47d54bc51e89e0fde706a0cf2b82cee
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="captein_console" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,9 +160,15 @@
       <method v="2" />
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="Django Server.Captain_console" />
       <item itemvalue="Django Server.captein_console" />
       <item itemvalue="Python.manage" />
+=======
+      <item itemvalue="Django Server.captein_console" />
+      <item itemvalue="Python.manage" />
+      <item itemvalue="Django Server.Captain_console" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     </list>
     <recent_temporary>
       <list>
@@ -149,6 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587989291198</updated>
       <workItem from="1587989341200" duration="20564000" />
+<<<<<<< HEAD
       <workItem from="1588672381264" duration="2806000" />
       <workItem from="1588675402824" duration="1033000" />
       <workItem from="1588683771034" duration="700000" />
@@ -156,6 +195,16 @@
       <workItem from="1588849444793" duration="336000" />
       <workItem from="1588849788189" duration="94000" />
       <workItem from="1588849934970" duration="91000" />
+=======
+      <workItem from="1588597012910" duration="212000" />
+<<<<<<< HEAD
+      <workItem from="1588597424428" duration="19969000" />
+      <workItem from="1588780817479" duration="634000" />
+=======
+      <workItem from="1588597424428" duration="23085000" />
+      <workItem from="1588805025458" duration="3364000" />
+>>>>>>> 33f25bc8f47d54bc51e89e0fde706a0cf2b82cee
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     </task>
     <servers />
   </component>
@@ -163,6 +212,7 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="551" y="0" key="#Captain_console" timestamp="1588675738312">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -172,6 +222,30 @@
     </state>
     <state x="178" y="79" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.823@0.23.1440.823" timestamp="1588522588599" />
     <state x="178" y="79" width="953" height="669" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.826@0.23.1440.826" timestamp="1588589183576" />
+=======
+    <state x="417" y="56" key="#Captain_console" timestamp="1588780921627">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+<<<<<<< HEAD
+    <state x="417" y="56" key="#Captain_console/0.0.1440.900@0.0.1440.900" timestamp="1588780577243" />
+    <state x="417" y="23" key="#captein_console" timestamp="1588780916691">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="417" y="23" key="#captein_console/0.23.1440.825@0.23.1440.825" timestamp="1588780916691" />
+=======
+    <state x="417" y="56" key="#Captain_console/0.0.1440.900@0.0.1440.900" timestamp="1588780921627" />
+>>>>>>> 33f25bc8f47d54bc51e89e0fde706a0cf2b82cee
+    <state x="178" y="61" width="953" height="669" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588764498630">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="178" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1588764498630" />
+    <state x="178" y="79" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.823@0.23.1440.823" timestamp="1588522588599" />
+    <state x="178" y="79" width="953" height="669" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.826@0.23.1440.826" timestamp="1588589183576" />
+    <state x="447" y="226" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588781103673">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="447" y="226" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.825@0.23.1440.825" timestamp="1588781103673" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     <state x="560" y="139" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog" timestamp="1588586458345">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
@@ -180,6 +254,7 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="875" height="438" key="DebuggerActiveHint/0.23.1440.823@0.23.1440.823" timestamp="1588522573149" />
+<<<<<<< HEAD
     <state x="367" y="86" key="FileChooserDialogImpl" timestamp="1588849866136">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -188,30 +263,69 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="1358" height="200" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1588585784896" />
+=======
+    <state width="1398" height="168" key="GridCell.Tab.0.bottom" timestamp="1588805012575">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="1398" height="168" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588780923464" />
+    <state width="1095" height="199" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1588627356220" />
+    <state width="1095" height="517" key="GridCell.Tab.0.bottom/0.23.1440.822@0.23.1440.822" timestamp="1588627487774" />
+    <state width="1398" height="168" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1588805012575" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     <state width="1358" height="192" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1588586369184" />
     <state width="1358" height="192" key="GridCell.Tab.0.bottom/0.23.1440.826@0.23.1440.826" timestamp="1588590403585" />
     <state width="1358" height="279" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1588594868914" />
     <state width="1358" height="192" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1588593852518" />
+<<<<<<< HEAD
     <state width="1358" height="279" key="GridCell.Tab.0.center" timestamp="1588594868913">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="1358" height="200" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1588585784895" />
+=======
+    <state width="1398" height="168" key="GridCell.Tab.0.center" timestamp="1588805012571">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="1398" height="168" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1588780923462" />
+    <state width="1095" height="199" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1588627356219" />
+    <state width="1095" height="517" key="GridCell.Tab.0.center/0.23.1440.822@0.23.1440.822" timestamp="1588627487772" />
+    <state width="1398" height="168" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1588805012571" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     <state width="1358" height="192" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1588586369183" />
     <state width="1358" height="192" key="GridCell.Tab.0.center/0.23.1440.826@0.23.1440.826" timestamp="1588590403584" />
     <state width="1358" height="279" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1588594868913" />
     <state width="1358" height="192" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1588593852518" />
+<<<<<<< HEAD
     <state width="1358" height="279" key="GridCell.Tab.0.left" timestamp="1588594868913">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="1358" height="200" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1588585784894" />
+=======
+    <state width="1398" height="168" key="GridCell.Tab.0.left" timestamp="1588805012569">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="1398" height="168" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1588780923461" />
+    <state width="1095" height="199" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1588627356219" />
+    <state width="1095" height="517" key="GridCell.Tab.0.left/0.23.1440.822@0.23.1440.822" timestamp="1588627487771" />
+    <state width="1398" height="168" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1588805012569" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     <state width="1358" height="192" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1588586369183" />
     <state width="1358" height="192" key="GridCell.Tab.0.left/0.23.1440.826@0.23.1440.826" timestamp="1588590403584" />
     <state width="1358" height="279" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1588594868913" />
     <state width="1358" height="192" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1588593852517" />
+<<<<<<< HEAD
     <state width="1358" height="279" key="GridCell.Tab.0.right" timestamp="1588594868914">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="1358" height="200" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1588585784895" />
+=======
+    <state width="1398" height="168" key="GridCell.Tab.0.right" timestamp="1588805012573">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="1398" height="168" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1588780923463" />
+    <state width="1095" height="199" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1588627356219" />
+    <state width="1095" height="517" key="GridCell.Tab.0.right/0.23.1440.822@0.23.1440.822" timestamp="1588627487773" />
+    <state width="1398" height="168" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1588805012573" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     <state width="1358" height="192" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1588586369184" />
     <state width="1358" height="192" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1588590403585" />
     <state width="1358" height="279" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1588594868914" />
@@ -240,10 +354,17 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state width="243" height="457" key="HiddenNamespacesPopup/0.23.1440.826@0.23.1440.826" timestamp="1588589033794" />
+<<<<<<< HEAD
     <state x="284" y="0" key="SettingsEditor" timestamp="1588849491019">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="284" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1588849491019" />
+=======
+    <state x="241" y="46" key="SettingsEditor" timestamp="1588598246556">
+      <screen x="0" y="23" width="1440" height="822" />
+    </state>
+    <state x="241" y="46" key="SettingsEditor/0.23.1440.822@0.23.1440.822" timestamp="1588598246556" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
     <state x="392" y="23" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1588586503555" />
     <state x="379" y="170" width="670" height="678" key="search.everywhere.popup" timestamp="1588587185908">
       <screen x="0" y="23" width="1440" height="825" />

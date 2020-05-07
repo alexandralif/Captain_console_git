@@ -1,6 +1,7 @@
 from django.db import models
 from computers.models import computer_category
 
+
 # Create your models here.
 class game_category(models.Model):
     name = models.CharField(max_length=255)
@@ -11,7 +12,9 @@ class games(models.Model):
     game_category = models.ForeignKey(game_category, on_delete=models.CASCADE)
     computer_category = models.ForeignKey(computer_category, on_delete=models.CASCADE)
     onsale = models.BooleanField()
-    description = description = models.CharField(max_length=999, blank=True)
+    description = models.CharField(max_length=999, blank=True)
+    def __str__(self):
+        return self.name
 
 class games_image(models.Model):
     image = models.CharField(max_length=999)
