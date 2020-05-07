@@ -21,11 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7f910703-f646-4397-a2a9-fe715d6c2c58" name="Default Changelist" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <change afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/cart/index.html" afterDir="false" />
 >>>>>>> 943890bef7ce667acd031a1d472453be3bd280ee
+=======
+>>>>>>> 25195ac6847065337ac9ea613f6dea7cbf569625
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navigation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,11 +175,15 @@
       <workItem from="1588597424428" duration="23085000" />
       <workItem from="1588805025458" duration="5867000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1588849528336" duration="5151000" />
       <workItem from="1588859769793" duration="1407000" />
 =======
       <workItem from="1588849528336" duration="7052000" />
 >>>>>>> 943890bef7ce667acd031a1d472453be3bd280ee
+=======
+      <workItem from="1588849528336" duration="7824000" />
+>>>>>>> 25195ac6847065337ac9ea613f6dea7cbf569625
     </task>
     <servers />
   </component>
