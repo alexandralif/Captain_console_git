@@ -4,7 +4,11 @@
     <option name="languageLevel" value="ES6" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (candy)" project-jdk-type="Python SDK" />
+=======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7" project-jdk-type="Python SDK" />
+>>>>>>> a0199560c5fd0e270ae4ad048c162aa52e76df0a
 =======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (Captain_console)" project-jdk-type="Python SDK" />
 >>>>>>> bb77479f2428e48ff5a58e8be75d56dc04817e52
