@@ -44,7 +44,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.captein_console">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="captein_console" />
       <option name="INTERPRETER_OPTIONS" value="" />
