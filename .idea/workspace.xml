@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f910703-f646-4397-a2a9-fe715d6c2c58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/captein_console/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/captein_console/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navigation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +166,7 @@
       <workItem from="1588597012910" duration="212000" />
       <workItem from="1588597424428" duration="23085000" />
       <workItem from="1588805025458" duration="5867000" />
-      <workItem from="1588849528336" duration="7528000" />
+      <workItem from="1588849528336" duration="7824000" />
     </task>
     <servers />
   </component>
