@@ -1,7 +1,7 @@
 {%  extends "base.html" %}
 {% block content %}
     <h3 class="red">Tölvuleikir</h3>
-    <div class="games">
+    <div class="computers">
         {% for game in games %}
             {% include 'games/single_game.html' with game=game %}
         {% endfor %}

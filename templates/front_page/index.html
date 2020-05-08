@@ -1,5 +1,10 @@
 {%  extends "base.html" %}
 {% block content %}
     <h3 class="red">Captain Console Front page</h3>
+    <div class="computers">
+    {% for product in products %}
+        {% include 'front_page/single_product.html' with product=product %}
+    {% endfor %}
+    </div>
 {% endblock %}
 
