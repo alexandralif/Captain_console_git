@@ -9,3 +9,7 @@ class Cart(models.Model):
     products = models.ManyToManyField(products,  null=True, blank=True)
     total_price = models.FloatField()
 
+
+
+
+
