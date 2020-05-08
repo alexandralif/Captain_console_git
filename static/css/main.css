@@ -1,4 +1,6 @@
 
+
+
 .container-fluid{
     background-color: #87ADB8 !important;
     height: 70px;
@@ -123,10 +125,11 @@ a {
     transition: transform 1s ease-in;
 }
 
-.games {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    .games {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 
 .game {
     display: grid;
@@ -142,7 +145,6 @@ a {
     background-repeat: no-repeat;
     background-position: center center;
 }
-
 .block {
     display: block;
 }
