@@ -9,7 +9,7 @@ class products(models.Model):
     name = models.CharField(max_length=255)
     description = models.CharField(max_length=999, blank=True)
     category = models.ForeignKey(product_category, on_delete=models.CASCADE)
-    price = models.FloatField()
+    price = models.IntegerField()
     on_sale = models.BooleanField()
 
     def __str__(self):

@@ -105,7 +105,7 @@ a {
 
 }
 .computers .computer:hover {
-    background-image: linear-gradient( #ef626c, #9A27F7), linear-gradient(#6564FF,#2A96Fa),linear-gradient(#2FF89F,#68FF6B);
+    background-image: linear-gradient( #ef626c, #9A27F7), linear-gradient(#6564FF,#2A96Fa),linear-gradient(#2FF89F,#68FF6B),linear-gradient(#2FF89F,#68FF6B);
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom, left bottom;
     background-size: 0 3px, 3px 0,0 3px, 3px 0;

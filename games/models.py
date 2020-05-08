@@ -8,7 +8,7 @@ class game_category(models.Model):
 
 class games(models.Model):
     name = models.CharField(max_length=255)
-    price = models.FloatField()
+    price = models.IntegerField()
     game_category = models.ForeignKey(game_category, on_delete=models.CASCADE)
     computer_category = models.ForeignKey(computer_category, on_delete=models.CASCADE)
     onsale = models.BooleanField()

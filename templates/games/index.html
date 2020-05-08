@@ -2,9 +2,9 @@
 {% block content %}
     <h3 class="red">Tölvuleikir</h3>
     <div class="computers">
-        {% for game in games %}
-            {% include 'games/single_game.html' with game=game %}
-        {% endfor %}
+    {% for game in games %}
+        {% include 'games/single_game.html' with game=game %}
+    {% endfor %}
     </div>
 {% endblock %}
 
