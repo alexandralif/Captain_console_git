@@ -1,7 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 from front_page.models import products
+from django.http import JsonResponse
 
 def index(request):
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        product = [{
+            'id': x.id,
+            'name': x.name,
+            'description': x.description,
+            'price' : x.price,
+            'firstImage': x.product_image_set.first().image
+        } for x in products.objects.filter(name__icontains=search_filter)]
+        return JsonResponse({'data': product})
     context ={'products': products.objects.all().order_by('name')}
     return render(request, "front_page/index.html", context)
 
@@ -9,4 +20,7 @@ def get_product_by_id(request,id):
     return render(request, 'front_page/product_details.html', {
         'products': get_object_or_404(products, pk=id)
     })
-# Create your views here.
+
+
+
+

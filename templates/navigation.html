@@ -34,10 +34,12 @@
             <li><a class="things" href="{% url 'register' %}">Nýskráning</a></li>
         {% endif %}
         <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Leita">
-        </div>
-        <button type="submit" class="btn btn-default">Leita</button>
+        <div class="input-group">
+          <input type="search" class="form-control" id="search-box" placeholder="Leita"/>
+            <div class="input-group-btn" >
+                <button type="button" id="search-btn" class="btn btn-default">Leita</button>
+            </div>
+        </div >
       </form>
       <li><a class="things" href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
       </ul>

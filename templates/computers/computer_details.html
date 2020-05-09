@@ -6,4 +6,5 @@
     {% for computer_image in computers.computer_image_set.all %}
         <img src="{{ computer_image.image }}" class="computer-img"/>
     {% endfor %}
+    <button class="addToCart" href="{% url 'cart-index' %}">Setja í körfu</button>
 {% endblock %}

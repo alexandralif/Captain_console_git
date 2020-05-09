@@ -22,5 +22,5 @@ urlpatterns = [
     path("computers/", include("computers.urls")),
     path("games/", include("games.urls")),
     path("user/",include("user.urls")),
-    path('cart/', include("cart.urls"))
+    path('cart/', include("cart.urls")),
 ]
