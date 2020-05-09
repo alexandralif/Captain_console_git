@@ -1,5 +1,9 @@
 
-
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 .container-fluid{
     background-color: #87ADB8 !important;
@@ -175,4 +179,5 @@ a {
 footer {
     width: 100%;
     margin: auto;
+    margin-top: auto;
 }
