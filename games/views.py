@@ -3,9 +3,8 @@ from games.models import games
 
 
 def index(request):
-    return render(request, "games/index.html", {
-        'games': games.objects.all()
-    })
+    context ={'games': games.objects.all().order_by('name')}
+    return render(request, "games/index.html", context)
 
 def get_game_by_id(request,id):
     return render(request, 'games/game_details.html', {
