@@ -19,7 +19,7 @@ $(document).ready(function(){
                 $('#search-box').val('');
             },
             error: function(xhr, status, error){
-                
+
                 console.error(error);
             }
         })

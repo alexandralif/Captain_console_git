@@ -6,6 +6,6 @@
     {% for games_image in games.games_image_set.all %}
         <img src="{{ games_image.image }}" class="computer-img"/>
     {% endfor %}
-    <button class="addToCart" href="{% url 'cart-index' %}">Setja í körfu</button>
+    <button type="button" id="cart-btn" class="btn btn-default" >Setja í körfu</button>
 {% endblock %}
 
