@@ -22,6 +22,11 @@ def get_product_by_id(request,id):
         'products': get_object_or_404(products, pk=id)
     })
 
+def ordered_by_price(request):
+    context = {'products': products.objects.all().order_by('price')}
+    return render(request, "front_page/index.html", context)
 
 
-
+def ordered_by_name(request):
+    context = {'products': products.objects.all().order_by('name')}
+    return render(request, "front_page/index.html", context)
