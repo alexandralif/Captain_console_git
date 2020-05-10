@@ -6,5 +6,4 @@ def index(request):
     return render(request, 'cart/index.html', context)
 
 
-
 # Create your views here.

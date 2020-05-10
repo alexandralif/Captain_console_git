@@ -1,4 +1,10 @@
 
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .container-fluid{
     background-color: #87ADB8 !important;
     height: 70px;
@@ -123,10 +129,11 @@ a {
     transition: transform 1s ease-in;
 }
 
-.games {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    .games {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 
 .game {
     display: grid;
@@ -142,7 +149,6 @@ a {
     background-repeat: no-repeat;
     background-position: center center;
 }
-
 .block {
     display: block;
 }
@@ -155,3 +161,23 @@ a {
     border-radius: 50%;
 }
 
+.footerBox {
+    text-indent: 20%;
+    vertical-align: top;
+    width:49%;
+    display: inline-block;
+    box-sizing: border-box;
+    min-height: 150px;
+}
+
+.roundCornerBox {
+    background-color: #87ADB8;
+    border-radius: 0px;
+    border: 0px solid #000000;
+}
+
+footer {
+    width: 100%;
+    margin: auto;
+    margin-top: auto;
+}

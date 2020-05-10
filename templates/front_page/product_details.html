@@ -6,4 +6,5 @@
     {% for product_image in products.product_image_set.all %}
         <img src="{{ product_image.image }}" class="computer-img"/>
     {% endfor %}
+    <button class="addToCart" href="{% url 'cart-index' %}">Setja í körfu</button>
 {% endblock %}
