@@ -7,7 +7,7 @@ $(document).ready(function(){
             type: 'GET',
             success: function(resp) {
                 var newHtml = resp.data.map(d =>{
-                    return <div class="well games">
+                    return <div class="well computer">
                             <a href="/${d.id}">
                                 <img class="games-img" src="${d.firstImage}"/>
                                 <h4>${d.name}</h4>
@@ -15,7 +15,7 @@ $(document).ready(function(){
                             </a>
                         </div>
                 });
-                $('.games').html(newHtml.join(''));
+                $('.computers').html(newHtml.join(''));
                 $('#search-box').val('');
             },
             error: function(xhr, status, error){

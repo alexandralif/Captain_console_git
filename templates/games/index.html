@@ -1,6 +1,12 @@
 {%  extends "base.html" %}
 {% block content %}
     <h3 class="red">Tölvuleikir</h3>
+    <div class="input-group">
+          <input type="search" class="form-control" id="search-box" placeholder="Leita"/>
+            <div class="input-group-btn" >
+                <button type="button" id="search-btn" class="btn btn-default">Leita</button>
+            </div>
+        </div >
     <div class="computers">
     {% for game in games %}
         {% include 'games/single_game.html' with game=game %}

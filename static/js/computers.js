@@ -3,23 +3,23 @@ $(document).ready(function(){
         e.preventDefault();
         var searchText = $('#search-box').val();
         $.ajax({
-            url: '?search_filter=' + searchText,
+            url: '/computers?search_filter=' + searchText,
             type: 'GET',
             success: function(resp) {
-                console.log(resp.data)
-                var newHtml = resp.data.map(d => {
-                    return `<div class="well computer">
-                            <a href="${d.id}">
+                var newHtml = resp.data.map(d =>{
+                    return `<div class="well computers">
+                            <a href="/computers/${d.id}">
                                 <img class="computer-img" src="${d.firstImage}"/>
                                 <h4>${d.name}</h4>
-                                <p>${d.price} kr.</p>
+                                <p>${d.description}</p>
                             </a>
                             </div>`
                 });
-                $('.computers').html(newHtml.join(''));
+                $('.products').html(newHtml.join(''));
                 $('#search-box').val('');
             },
             error: function(xhr, status, error){
+                
                 console.error(error);
             }
         })

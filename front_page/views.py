@@ -9,9 +9,10 @@ def index(request):
             'id': x.id,
             'name': x.name,
             'description': x.description,
-            'price' : x.price,
+            'price': x.price,
             'firstImage': x.product_image_set.first().image
         } for x in products.objects.filter(name__icontains=search_filter)]
+        print(product)
         return JsonResponse({'data': product})
     context ={'products': products.objects.all().order_by('name')}
     return render(request, "front_page/index.html", context)
