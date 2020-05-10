@@ -30,3 +30,19 @@ def ordered_by_price(request):
 def ordered_by_name(request):
     context = {'products': products.objects.all().order_by('name')}
     return render(request, "front_page/index.html", context)
+
+def get_nintendo_products(request):
+    context = {'products': products.objects.filter(category_id=1)}
+    return render(request, "front_page/index.html", context)
+
+def get_gameboy_products(request):
+    context = {'products': products.objects.filter(category_id=2)}
+    return render(request, "front_page/index.html", context)
+
+def get_playstation_products(request):
+    context = {'products': products.objects.filter(category_id=3)}
+    return render(request, "front_page/index.html", context)
+
+def get_xbox_products(request):
+    context = {'products': products.objects.filter(category_id=4)}
+    return render(request, "front_page/index.html", context)

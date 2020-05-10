@@ -1,5 +1,15 @@
+.things{
+    font-size: medium;
+    padding-right: 5px;
+}
+.takkar{
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
 .dropdown{
     position: relative;
+    display: inline;
 }
 .container{
     min-height: 100vh;
@@ -9,11 +19,18 @@
 
 .container-fluid{
     background-color: #87ADB8 !important;
-    height: 70px;
+    height: 170px;
 }
-.logo{
-    width: 60px;
-    height: 50px
+.navbar-brand {
+    width: 180px;
+    height: 140px;
+}
+img.logo{
+    width: 160px;
+    height: 150px;
+    padding: 5px;
+    position: center;
+
 }
 .navbar {
     position: relative;
