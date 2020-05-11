@@ -5,4 +5,4 @@ from django.db import models
 
 class account(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    account_img = models.CharField(max_length=999,default='https://icons8.com/icon/82751/user')
+    account_img = models.CharField(max_length=999,default="https://img.icons8.com/material-outlined/24/000000/user--v1.png")
