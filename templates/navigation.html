@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="things">
-            <a href="{% url 'computers-index' %}" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="flase">Leikjatölvur <span class="caret"></span></a>
+            <a href="{% url 'products-index' %}" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="flase">Leikjatölvur <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a href="/computers" >Allar leikjatölvur</a></li>
                 <li><a href="/computers/1">Nintendo</a></li>
@@ -28,7 +28,7 @@
 
             </ul>
       </li>
-        <li><a class="things" href="{% url 'games-index' %}">Tölvuleikir</a></li>
+        <li><a class="things" href="/games">Tölvuleikir</a></li>
         {% if user.is_authenticated %}
             <li><a class="things" href="{% url 'logout' %}">Útskrá</a></li>
             <li><a class="things" href="{% url 'my_account' %}">Mínar síður</a></li>

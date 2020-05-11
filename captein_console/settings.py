@@ -37,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'computers.apps.ComputersConfig',
-    'games.apps.GamesConfig',
     'user.apps.UserConfig',
     'cart.apps.CartConfig',
     'products.apps.ProductsConfig'
@@ -82,9 +80,9 @@ WSGI_APPLICATION = 'captein_console.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gkzrimri',
-        'USER': 'gkzrimri',
-        'PASSWORD': '2_fU_gB9JTBKz1lC0G_E5zCcVgFS0myX',
+        'NAME': 'koeynakn',
+        'USER': 'koeynakn',
+        'PASSWORD': 'UrwAOPu_DbtXRfG-2caW5uRTqq5X853p',
         'HOST': 'balarama.db.elephantsql.com',
         'PORT': '5432'
     }

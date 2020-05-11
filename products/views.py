@@ -22,6 +22,14 @@ def get_product_by_id(request,id):
         'products': get_object_or_404(products, pk=id)
     })
 
+def get_all_games(request):
+    context = {'products': products.objects.filter(type_id=2)}
+    return render(request, "products/index.html", context)
+
+def get_all_computers(request):
+    context = {'products': products.objects.filter(type_id=1)}
+    return render(request, "products/index.html", context)
+
 def ordered_by_price(request):
     context = {'products': products.objects.all().order_by('price')}
     return render(request, "products/index.html", context)
