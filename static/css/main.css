@@ -1,3 +1,10 @@
+a.cart{
+    width: 10px;
+    length: 10px;
+}
+.product_deatails{
+    display: inline;
+}
 .things{
     font-size: medium;
     padding-right: 5px;
