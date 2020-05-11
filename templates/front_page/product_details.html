@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+    <div class="product_deatails">
     <h1>{{ products.name }}</h1>
     <p>{{ products.description }}</p>
     <p>{{ products.price }}kr.</p>
@@ -7,4 +8,5 @@
         <img src="{{ product_image.image }}" class="computer-img"/>
     {% endfor %}
     <button class="addToCart" href="{% url 'add_to_cart' products.id %}">Setja í körfu</button>
+    </div>
 {% endblock %}
