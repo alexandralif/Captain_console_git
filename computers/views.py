@@ -22,3 +22,5 @@ def get_computer_by_id(request,id):
         'computers': get_object_or_404(computers, pk=id)
     })
 
+
+

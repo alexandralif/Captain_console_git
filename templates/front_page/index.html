@@ -7,20 +7,34 @@
                 <button type="button" id="search-btn" class="btn btn-default">Leita</button>
             </div>
         </div >
-    <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Raða eftir:
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="/ordered_by_name">Stafrófsröð</a></li>
-        <li><a href="/ordered_by_price">Verði: ódýrast fremst</a></li>
-      </ul>
+    <div class="takkar">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Raða eftir:
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="/ordered_by_name">Stafrófsröð</a></li>
+            <li><a href="/ordered_by_price">Verði: ódýrast fremst</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Sía eftir:
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="/nintendo">Nintendo</a></li>
+            <li><a href="/gameboy">GameBoy</a></li>
+            <li><a href="/playstation">Playstation</a></li>
+            <li><a href="/xbox">Xbox</a></li>
+          </ul>
+        </div>
     </div>
+
     <div class="computers">
     {% for product in products %}
         {% include 'front_page/single_product.html' with product=product %}
     {% endfor %}
     </div>
 {% endblock %}
-

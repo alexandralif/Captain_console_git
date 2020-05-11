@@ -23,4 +23,9 @@ urlpatterns = [
     path("games/", include("games.urls")),
     path("user/",include("user.urls")),
     path('cart/', include("cart.urls")),
+    path("nintendo_computer", include("computers.urls")),
+    path("gameboy_computer", include("computers.urls")),
+    path("playstation_computer", include("computers.urls")),
+    path("xbox_computer", include("computers.urls")),
+
 ]
