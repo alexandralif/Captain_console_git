@@ -31,9 +31,11 @@
         <li><a class="things" href="{% url 'games-index' %}">Tölvuleikir</a></li>
         {% if user.is_authenticated %}
             <li><a class="things" href="{% url 'logout' %}">Útskrá</a></li>
+            <li><a class="things" href="{% url 'my_account' %}">Mínar síður</a></li>
         {% else %}
             <li><a class="things" href="{% url 'login' %}">Innskráning</a></li>
             <li><a class="things" href="{% url 'register' %}">Nýskráning</a></li>
+
         {% endif %}
     <!--     <form class="navbar-form navbar-right">
         <div class="input-group">
