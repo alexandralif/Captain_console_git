@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'games.apps.GamesConfig',
     'user.apps.UserConfig',
     'cart.apps.CartConfig',
-    'front_page.apps.FrontPageConfig'
+    'products.apps.ProductsConfig'
 ]
 
 MIDDLEWARE = [
