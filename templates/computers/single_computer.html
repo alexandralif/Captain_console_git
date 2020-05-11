@@ -1,9 +1,0 @@
-<div class="well computer">
-    <a href="/computers/{{ computer.id }}">
-        <img class="computer-img" src="{{ computer.computer_image_set.first.image }}" />
-        <h4>{{ computer.name }}</h4>
-        <h6>{{ computer.price}} kr.</h6>
-        <p>{{ computer.description }}</p>
-        <a class="cart" href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-    </a>
-</div>

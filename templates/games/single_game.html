@@ -1,9 +1,0 @@
-<div class="well computer">
-    <a href="/games/{{ game.id }}">
-        <img class="computer-img" src="{{ game.games_image_set.first.image }}" />
-        <h4>{{ game.name }}</h4>
-        <p>Verð:{{ game.price }} kr.</p>
-        <a class="cart" href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-    </a>
-</div>
-
