@@ -31,7 +31,7 @@
         <li><a class="things" href="/games">Tölvuleikir</a></li>
         {% if user.is_authenticated %}
             <li><a class="things" href="{% url 'logout' %}">Útskrá</a></li>
-            <li><a class="things" href="{% url 'my_account' %}">Mínar síður</a></li>
+            <li><a class="things" href="{% url 'my_account' %}">Mínar síður <span class="glyphicon glyphicon-user"></span></a></li>
         {% else %}
             <li><a class="things" href="{% url 'login' %}">Innskráning</a></li>
             <li><a class="things" href="{% url 'register' %}">Nýskráning</a></li>
