@@ -7,6 +7,7 @@
     {% for product_image in products.product_image_set.all %}
         <img src="{{ product_image.image }}" class="computer-img"/>
     {% endfor %}
-    <a class="addToCart" href="{% url 'add_to_cart' products.id %}">Setja í körfu</a>
+    <a class="btn btn-info" href="{% url 'add_to_cart' products.id %}" role="button">Setja í körfu</a>
+    <a class="btn btn-info" href="/" role="button">Aftur á heimasíðu</a>
     </div>
 {% endblock %}

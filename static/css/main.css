@@ -1,3 +1,4 @@
+
 a.cart{
     width: 10px;
     length: 10px;
@@ -207,4 +208,6 @@ footer {
     margin: auto;
     margin-top: auto;
 }
-
+.btn-info{
+    color: lightsteelblue;
+}

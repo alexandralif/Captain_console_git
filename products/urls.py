@@ -11,6 +11,6 @@ urlpatterns = [
     path("playstation", views.get_playstation_products, name="get_playstation_products"),
     path("xbox", views.get_xbox_products, name="get_xbox_products"),
     path("games", views.get_all_games, name="get_all_games"),
-    path("computers", views.get_all_computers, name="get_all_computers")
+    path("all_computers", views.get_all_computers, name="get_all_computers")
 
 ]
