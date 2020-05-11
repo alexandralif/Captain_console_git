@@ -1,9 +1,9 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-# Create your models here.
+from products.models import products
 from computers.models import computers
-from front_page.models import products
+
 
 
 
