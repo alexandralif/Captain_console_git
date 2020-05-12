@@ -1,10 +1,32 @@
 {%  extends "base.html" %}
+{% load static %}
 {% block content %}
     <h3 class="red">Cart page!</h3>
-    <table>
-    {% for item in cart.model.games.all %}
-        <tr>item.total_price</tr>
-    {% endfor %}
+    <a class="btn btn-primary" href="{% url 'products-index' %}" > &#x2190; Halda áfram að versla</a>
+    <br>
+    <table class="table">
+    <tr>
+        <th><p>Items: </p></th>
+        <th><p>Total: </p></th>
+        <th>
+            <a style="float:right; margin:5xp;" class="btn btn-success" href="{% url 'checkout-index' %}">Ganga frá pöntun</a>
+        </th>
+    </tr>
+    </table>
+    <br>
+    <table class="table">
+        <div class="cart-row">
+            <th style="flex:2"><img class="row-image" src="{{ product.product_image_set.first.image }}"</th>
+            <th style="flex:2"><strong>Vara<strong><p>Vara 1</p></th>
+            <th style="flex:1"><strong>Verð<strong><p>2000 kr</p></th>
+            <th style="flex:1"><strong>Fjöldi<strong>
+                <p class="quantity">2</p>
+                 <div class="quantity">
+                            <img class="chg-quantity" src="{% static 'image/arrow_up.png' %}">
+                            <img class="chg-quantity" src="{% static 'image/arrow_down.png' %}">
+                    </div></th>
+            <th style="flex:1"><strong>Samtals<strong><p>200kr</p></th>
 
+        </div>
     </table>
 {% endblock %}

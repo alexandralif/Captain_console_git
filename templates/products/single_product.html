@@ -3,6 +3,6 @@
         <img class="computer-img" src="{{ product.product_image_set.first.image }}" />
         <h4>{{ product.name }}</h4>
         <p>{{ product.price }} kr.</p>
-        <a class="cart" href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+        <a class="btn btn-outline-secondary add-btn" href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>
     </a>
 </div>

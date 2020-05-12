@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from cart.models import Cart
 from products.models import products
+from django.shortcuts import render
 
 
 @login_required
@@ -15,3 +16,5 @@ def add_to_cart(request, id):
     return render(request, 'products/product_details.html', {
        'products': get_object_or_404(products, pk=id)
     })
+
+
