@@ -3,8 +3,9 @@
         <img id="computer_im" class="computer-img" src="{{ product.product_image_set.first.image }}" />
         <h4 class="titill">{{ product.name }}</h4>
         <p>{{ product.price }} kr.</p>
-        <button class="btn btn-outline-secondary add-btn update-cart" onclick="add_to_cart({{ product.id }}">
+       <!-- <button type="button" class="btn btn-outline-secondary add-btn update-cart" onclick="add_to_cart({{ product.id }}">
             <span class="glyphicon glyphicon-shopping-cart"></span></button>
-        <!--<a href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>-->
+        <a href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>-->
     </a>
+    <button data-product="{{ product.id }}" data-action="add" class="btn btn-outline-secondary add-btn add_to_cart"> Setja í körfu</button>
 </div>
