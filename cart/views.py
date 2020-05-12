@@ -12,16 +12,6 @@ def index(request):
 @login_required
 def add_to_cart(request, id):
     print(id)
-    if 'search_filter' in request.GET:
-        search_filter = request.GET['search_filter']
-        product = [{
-            'id': x.id,
-            'name': x.name,
-            'description': x.description,
-            'price': x.price,
-            'firstImage': x.product_image_set.first().image
-        } for x in products.objects.filter(name__icontains=search_filter)]
-        return JsonResponse({'data': product})
     return render(request, 'products/product_details.html', {
        'products': get_object_or_404(products, pk=id)
     })
