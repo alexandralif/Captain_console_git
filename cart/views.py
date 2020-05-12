@@ -11,7 +11,7 @@ def index(request):
 
 @login_required
 def add_to_cart(request, id):
-    print('hæhæ')
+    print(id)
     return render(request, 'products/product_details.html', {
        'products': get_object_or_404(products, pk=id)
     })
