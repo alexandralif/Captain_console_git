@@ -6,13 +6,35 @@
         <div class="box-element" id="form-wrapper">
             <form id="form">
                 <div id="user-info">
+                    <div class="form-field">
+                        <input required class="form-control" type="text" name="name" placeholder="Fullt nafn">
+                    </div>
+                    <div class="form-field">
+                        <input required class="form-control" type="text" name="street_name" placeholder="Götuheiti">
+                    </div>
+                    <div class="form-field">
+                        <input required class="form-control" type="text" name="house_num" placeholder="Húsnúmer">
+                    </div>
+                     <div class="form-field">
+                        <input required class="form-control" type="text" name="country" placeholder="Land">
+                    </div>
+                     <div class="form-field">
+                        <input required class="form-control" type="text" name="city" placeholder="Bæjarfélag">
+                    </div>
+                    <div class="form-field">
+                        <input required class="form-control" type="text" name="zip" placeholder="Póstnúmer">
+                    </div>
+
+
 
                 </div>
                 <div id="shipping-info">
 
                 </div>
+                <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'cart-index' %}" > &#x2190; Til baka</a>
+
+                <a style="float:right; margin: 5px;" class="btn btn-success" href="{% url 'checkout-payment' %}"> Halda áfram</a>
                 <hr>
-                <input type="submit" value="Continue">
             </form>
         </div>
     </div>
