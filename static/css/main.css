@@ -1,8 +1,4 @@
 
-a.cart{
-    width: 10px;
-    length: 10px;
-}
 
 .product_deatails{
     display: inline;
@@ -124,6 +120,7 @@ a {
 .computers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 15px;
 }
 
 .computer a {
@@ -139,7 +136,7 @@ a {
 
 }
 .computers .computer:hover {
-    background-image: linear-gradient( #ef626c, #9A27F7), linear-gradient(#6564FF,#2A96Fa),linear-gradient(#2FF89F,#68FF6B),linear-gradient(#2FF89F,#68FF6B);
+    background-image: linear-gradient( #87ADB8, #2a96fa), linear-gradient(#87ADB8, #2a96fa),linear-gradient(#87ADB8, #2a96fa),linear-gradient(#87ADB8, #2a96fa);
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom, left bottom;
     background-size: 0 3px, 3px 0,0 3px, 3px 0;
@@ -147,20 +144,11 @@ a {
     cursor: pointer;
 }
 
-.computers .computer:hover .computer-img {
-    transform: perspective(400px) scale(1.1) rotateY(15deg);
 
+.games {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-
-.computer-img {
-    width: 200px;
-    transition: transform 1s ease-in;
-}
-
-    .games {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
 
 
 .game {
@@ -208,5 +196,25 @@ footer {
     width: 100%;
     margin: auto;
     margin-top: auto;
+}
+.dropdown-menu{
+    font-size: 12px !important;
+}
+
+#pond{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.glyphicon.glyphicon-shopping-cart{
+    font-size: 30px;
+    border: 1px solid;
+    padding: 3px;
+}
+
+.computer-img {
+    width: 200px;
+    padding: 15px;
 }
 
