@@ -1,14 +1,12 @@
 {%  extends "Base.html" %}
 {% block content %}
-    <h3 class="red">Captain Console Front page</h3>
-    <div class="input-group">
+    <h3 class="red">Allar vörur</h3>
+    <div class="input-group" class="takkar">
           <input type="search" class="form-control" id="search-box" placeholder="Leita"/>
-            <div class="input-group-btn" >
-                <button type="button" id="search-btn" class="btn btn-default">Leita</button>
+            <div class="input-group-btn" style="padding-left: 5px;">
+                <button  type="button" id="search-btn" class="btn btn-default">Leita</button>
             </div>
-        </div >
-    <div class="takkar">
-        <div class="dropdown">
+        <div class="dropdown" style="float: right">
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Raða eftir:
             <span class="caret"></span>
@@ -18,8 +16,8 @@
             <li><a href="/ordered_by_price">Verði: ódýrast fremst</a></li>
           </ul>
         </div>
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <div class="dropdown" style="float:right; padding-left: 5px;">
+            <button  class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Sía eftir:
             <span class="caret"></span>
           </button>

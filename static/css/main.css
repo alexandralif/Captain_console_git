@@ -10,7 +10,6 @@
 .takkar{
     padding-right: 3px;
     padding-top: 3px;
-    padding-bottom: 3px;
 }
 .dropdown{
     position: relative;
@@ -121,6 +120,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 15px;
+    padding-top: 10px;
 }
 
 .computer a {
@@ -201,16 +201,11 @@ footer {
     font-size: 12px !important;
 }
 
-#pond{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
 .glyphicon.glyphicon-shopping-cart{
     font-size: 30px;
     border: 1px solid;
     padding: 3px;
+
 }
 
 .computer-img {
@@ -218,3 +213,6 @@ footer {
     padding: 15px;
 }
 
+.karfa{
+    mr-auto:
+}
