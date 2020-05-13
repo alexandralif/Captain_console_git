@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+               <form class="form form-horizontal" action="{% url 'checkout-add_personal_info' %}"method="post">
+                   {% csrf_token %}
+                   {{ form }}
+                        <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'cart-index' %}" > &#x2190; Til baka</a>
+
+                <a style="float:right; margin: 5px;" value="Create" class="btn btn-success" href="{% url 'checkout-payment' %}"> Halda áfram</a>
+               </form>
+
+{% endblock %}
