@@ -24,10 +24,12 @@
                 <td></td>
                 <th><script>
             total_price=0
+            new_product = 0
                     {% for product in cart %}
-                        total_price  += {{ product.products.price }}
+                        new_product = {{ product.products.price }} *{{ product.quantity }}
+                        total_price  += new_product
                     {% endfor %}
-          document.write("Verð samtals: " + total_price)
+          document.write("Verð samtals: " + total_price + " kr")
         </script></th>
 
         </foot>
