@@ -10,21 +10,30 @@
         <th>Vara: </th>
         <th>Fjöldi: </th>
         <th>Verð: </th>
+        <th>Eyða vöru úr körfu</th>
     </head>
             {% for product in cart %}
-                <tr><td><img id="computer_im" class="computer-img" src="{{ product.products.product_image_set.first.image }}" /></td><td>{{ product.products.name }}</td><td>{{ product.quantity }}</td><td>{{ product.products.price }}</td></tr>
+                <tr><td><img id="computer_im" class="computer-img" src="{{ product.products.product_image_set.first.image }}" /></td><td>{{ product.products.name }}</td><td>{{ product.quantity }}</td><td>{{ product.products.price }}</td>
+                <td><a class="btn btn-info" href="" role="button">Eyða úr körfu</a></td>
+                </tr>
         {% endfor %}
       <foot>
+
+               <td></td>
+                <td></td>
+                <td></td>
+                <th><script>
+            total_price=0
                     {% for product in cart %}
-                                 total_price  += {{ product.products.price }}
-                            {% endfor %}
-                <td></td>
-                <td></td>
-                <td></td>
-                <th>Samtals: {{ total_price }}</th>
+                        total_price  += {{ product.products.price }}
+                    {% endfor %}
+          document.write("Verð samtals: " + total_price)
+        </script></th>
 
         </foot>
     </table>
+
+
     <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'products-index' %}" > &#x2190; Halda áfram að versla</a>
      <a style="float:right; margin:5xp;" class="btn btn-success" href="{% url 'checkout-index' %}">Ganga frá pöntun</a>
 
