@@ -27,5 +27,17 @@ def add_to_cart(request, id):
        'products': get_object_or_404(products, pk=id)
     })
 
-#def remove_from_cart(request,id):
+def remove_from_cart(request,id):
+    p = products.objects.filter(pk=id).first()
+    u = User.objects.filter(pk=request.user.id).first()
+    cart = Cart.objects.filter(user=u, products=p,).first()
+    if cart.quantity != 1:
+        cart.quantity -=1
+        cart.save()
+    else:
+        cart.delete()
+
+#def delete_all_cart()
+
+
 
