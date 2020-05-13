@@ -2,8 +2,12 @@
 {% block content %}
      <div class="account_details">
         <h1> Mínar síður</h1>
+
         <p> Notandanafn: {{ user.username }}</p>
-         <p> Mynd:  </p>
+         <p> Fyrsta nafn: {{ user.first_name }}</p>
+        <p> Seinna nafn: {{ user.last_name }}</p>
+
          <a style="float:right; margin: 5px;" class="btn btn-success" href="{% url 'create_user' %}"> Setja inn upplýsingar</a>
         </div>
+
 {% endblock %}

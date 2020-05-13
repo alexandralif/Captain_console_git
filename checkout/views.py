@@ -11,7 +11,8 @@ from checkout.forms.personal_info_form import PersonalForm
 
 def add_personal_info(request):
     if request.method == 'POST':
-        print(1)
+        form = PersonalForm(data=request.POST)
+
     else:
 
         form = PersonalForm()

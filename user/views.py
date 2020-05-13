@@ -2,6 +2,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
+
+from account.models import account_image
 from user.forms.create_user import ProfileCreateForm
 from django.contrib.auth.decorators import login_required
 
@@ -35,7 +37,12 @@ def index(request):
 #@login_required
 def create_user(request):
     if request.method == 'POST':
-        print(1)
+        form = ProfileCreateForm(data=request.POST)
+        if form.is_valid():
+            created = form.save()
+            #acc_img = account_image(image=request.POST['image'],user=created)
+            #acc_img.save()
+            return redirect('user/my_account')
     else:
         form = ProfileCreateForm()
     return render(request, 'user/create_user.html', {
