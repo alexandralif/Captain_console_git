@@ -42,6 +42,9 @@ def remove_from_cart(request,id):
         cart.save()
     else:
         cart.delete()
+    #return render(request, 'cart/index.html', {
+    #    'products': get_object_or_404(products, pk=id)
+    #})
     return render(request, 'products/product_details.html', {
         'products': get_object_or_404(products, pk=id)
     })
