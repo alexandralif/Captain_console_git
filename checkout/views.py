@@ -14,6 +14,7 @@ def add_personal_info(request):
         form = PersonalForm(data=request.POST)
         if form.is_valid():
             form.save()
+
     else:
         form = PersonalForm()
     return render(request, 'checkout/add_personal_info.html', {
