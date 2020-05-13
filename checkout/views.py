@@ -12,9 +12,10 @@ from checkout.forms.personal_info_form import PersonalForm
 def add_personal_info(request):
     if request.method == 'POST':
         form = PersonalForm(data=request.POST)
+        if form.is_valid():
+            form.save()
 
     else:
-
         form = PersonalForm()
     return render(request, 'checkout/add_personal_info.html', {
         'form': form
