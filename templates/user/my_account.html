@@ -4,6 +4,6 @@
         <h1> Mínar síður</h1>
         <p> Notandanafn: {{ user.username }}</p>
          <p> Mynd:  </p>
-         <button types="button" id="account_button" class="btn btn-default">Breyta aðgangi</button>
+         <a style="float:right; margin: 5px;" class="btn btn-success" href="{% url 'create_user' %}"> Setja inn upplýsingar</a>
         </div>
 {% endblock %}
