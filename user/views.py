@@ -38,6 +38,6 @@ def create_user(request):
         print(1)
     else:
         form = ProfileCreateForm()
-    return render(request, 'user/create_user.html'), {
+    return render(request, 'user/create_user.html', {
         'form': form
-    }
+    })
