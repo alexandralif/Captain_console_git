@@ -1,20 +1,39 @@
 {%  extends "base.html" %}
 {% load static %}
 {% block content %}
-    <h3 class="red">Cart page!</h3>
-    <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'products-index' %}" > &#x2190; Halda áfram að versla</a>
+    <h3 class="red">Karfan þín!</h3>
     <br>
+    <div class="my_table">
     <table class="table">
-    <tr>
-        <th><p>Items: </p></th>
-        <th><p>Total: </p></th>
-        <th>
-            <a style="float:right; margin:5xp;" class="btn btn-success" href="{% url 'checkout-index' %}">Ganga frá pöntun</a>
-        </th>
-    </tr>
+    <head>
+        <th>Mynd:</th>
+        <th>Vara: </th>
+        <th>Fjöldi: </th>
+        <th>Verð: </th>
+    </head>
+            {% for product in cart %}
+                <tr><td><img id="computer_im" class="computer-img" src="{{ product.products.product_image_set.first.image }}" /></td><td>{{ product.products.name }}</td><td>{{ product.quantity }}</td><td>{{ product.products.price }}</td></tr>
+        {% endfor %}
+      <foot>
+                    {% for product in cart %}
+                                 total_price  += {{ product.products.price }}
+                            {% endfor %}
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>Samtals: {{ total_price }}</th>
+
+        </foot>
     </table>
+    <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'products-index' %}" > &#x2190; Halda áfram að versla</a>
+     <a style="float:right; margin:5xp;" class="btn btn-success" href="{% url 'checkout-index' %}">Ganga frá pöntun</a>
+
+    </div>
     <br>
-    <table class="table">
+
+
+
+  <!--  <table class="table">
         <div class="cart-row">
             <th style="flex:2"><img class="row-image" src="{{ product.product_image_set.first.image }}"</th>
             <th style="flex:2"><strong>Vara<strong><p>Vara 1</p></th>
@@ -28,5 +47,5 @@
             <th style="flex:1"><strong>Samtals<strong><p>200kr</p></th>
 
         </div>
-    </table>
+    </table> -->
 {% endblock %}

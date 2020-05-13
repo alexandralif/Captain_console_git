@@ -7,5 +7,5 @@
             <span class="glyphicon glyphicon-shopping-cart"></span></button>
         <a href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>-->
     </a>
-    <button data-product="{{ product.id }}" data-action="add" class="btn btn-outline-secondary add-btn add_to_cart"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+    <a href="{% url 'add_to_cart' product.id %}"  class="btn btn-outline-secondary add-btn add_to_cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
 </div>
