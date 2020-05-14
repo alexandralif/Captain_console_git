@@ -12,6 +12,4 @@ def index(request):
 @login_required
 def see_search_history(request):
     user_history = Product_history.objects.filter(user=request.user)
-    return render(request, 'history/search_history.html', {
-        'user_history': user_history
-    })
+    pass

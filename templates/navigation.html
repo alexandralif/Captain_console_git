@@ -37,15 +37,8 @@
             <li><a class="things" href="{% url 'register' %}">Nýskráning</a></li>
 
         {% endif %}
-    <!--     <form class="navbar-form navbar-right">
-        <div class="input-group">
-          <input type="search" class="form-control" id="search-box" placeholder="Leita"/>
-            <div class="input-group-btn" >
-                <button type="button" id="search-btn" class="btn btn-default">Leita</button>
-            </div>
-        </div >
-      </form>-->
-        <li><a class="things" href="/SearchHistory">Leitarsaga</a></li>
+      <li><a class="search" href="/SearchHistory">Leitarsaga</a></li>
+
       <li class="navbar-nav mr-auto"><a  class="things" href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
 
       </ul>
