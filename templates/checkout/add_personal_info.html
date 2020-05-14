@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
     <div class="col-6">
-        <h4>Kaupenda upplýsingar</h4>
+        <h4>Upplýsingar um kaupanda</h4>
                <form class="form form-horizontal" action="{% url 'checkout-add_personal_info'%}"method="post">
                    {% csrf_token %}
                    {{ form }}
