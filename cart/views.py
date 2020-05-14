@@ -15,13 +15,14 @@ def index(request):
 
 @login_required
 def add_to_cart(request, id):
+    '''this is our add to cart function. It adds a product to the cart'''
     p=products.objects.filter(pk=id).first()
     u=User.objects.filter(pk=request.user.id).first()
     cart=Cart.objects.filter(user=u, products=p).first()
-    if cart!=None:
-        cart.quantity +=1
+    if cart!=None: #if there item is already in the cart we only
+        cart.quantity +=1 #have to expand the quantity by one
         cart.save()
-    else:
+    else: #if the item is not in the cart we have to add the entire item to the cart
         #c=Cart.objects.filter(user=u,products=p,quantity=1).first()
         new_cart = Cart(user=u, products=p,quantity=1)
         new_cart.save()
@@ -31,16 +32,18 @@ def add_to_cart(request, id):
 
 @login_required
 def remove_from_cart(request,id):
+    '''this is our remover from cart function. It removes a product from the
+    cart.'''
     #cart_item= get_object_or_404(cart,pk=id)
     #cart_item.delete()
 
     p = products.objects.filter(pk=id).first()
     u = User.objects.filter(pk=request.user.id).first()
     cart = Cart.objects.filter(user=u, products=p,).first()
-    if cart.quantity > 1:
-        cart.quantity -=1
+    if cart.quantity > 1: #if the quantity of the product is bigger than one
+        cart.quantity -=1 #we only have to lower the quantity and remove one of that item
         cart.save()
-    else:
+    else:      #else we have to delet the entire item from the cart
         cart.delete()
     #return render(request, 'cart/index.html', {
     #    'products': get_object_or_404(products, pk=id)
