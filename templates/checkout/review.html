@@ -1,30 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-    <div id="header-review"><h1>Yfirlit yfir pöntun</h1> </div>
+    <div id="header-review"><h1>Yfirlit yfir pöntun</h1>
+    <hr>
   <div class="row">
     <div class="col-lg-6">
-        <div class="box-element" id="form-wrapper">
+        <div class="box-element box">
             <form id="form">
                 <div id="pers_info" >
-                    <p>Upplýsingar um kaupanda:</p>
+                    <h3>Upplýsingar um kaupanda:</h3>
                     <div class="tab">
-                        <p>Nafn:</p> {{ pers_info.name }}
-                        <p>Götuheiti:</p> {{ pers_info.street_name }}
-                        <p>Húsnúmer:</p> {{ pers_info.house_num }}
-                        <p>Land:</p> {{ pers_info.country }}
-                        <p>Bæjarfélag:</p> {{ pers_info.city }}
-                        <p>Póstnúmer:</p> {{ pers_info.zip }}
+                       <p> <b>Nafn:</b> {{ pers_info.name }} </p>
+                        <p><b>Götuheiti:</b> {{ pers_info.street_name }} </p>
+                        <p><b>Húsnúmer:</b> {{ pers_info.house_num }} </p>
+                       <p> <b>Land:</b> {{ pers_info.country }} </p>
+                       <p> <b>Bæjarfélag:</b> {{ pers_info.city }} </p>
+                       <p> <b>Póstnúmer:  </b>{{ pers_info.zip }} </p>
                     </div>
+                    <hr>
 
                 </div>
                 <div id="paym_info" >
-                    <p>Kortaupplýsingar:</p>
+                    <div class="my_table">
+                        <table class="table">
+                            <head>
+                    <h3>Kortaupplýsingar:</h3>
+                                </head>
                     <div class="tab">
-                        <p>Kortahafi:</p> {{ payment_info.cardholder }}
-                        <p>Kortanúmer:</p> {{ payment_info.cardnumber }}
-                        <p>exp_month:</p> {{ payment_info.exp_month }}
-                        <p>exp_year:</p> {{ payment_info.exp_year }}
+                       <p> <b>Kortahafi: </b> {{ payment_info.cardholder }} </p>
+                        <p> <b>Kortanúmer: </b>{{ payment_info.card_num }}</p>
+                        <p> <b>exp_month: </b> {{ payment_info.exp_month }}</p>
+                        <p> <b>exp_year:  </b>{{ payment_info.exp_year }}</p>
                     </div>
+                            </table>
+                        </div>
 
                 </div>
             </form>
@@ -32,14 +40,35 @@
         </div>
     </div>
   <div class="col-lg-6">
-        <div class="box-element" id="form-wrapper">
+        <div class="box-element box" >
              <form id="form">
-                <div id="product-info" >
+                <div id="product-info">
+                    <head><h3>Vörur: </h3> </head>
+                    <br>
+                    <div class="my_table">
+                        <table class="table">
+                            <head>
+                                <th>Mynd:</th>
+                                <th>Vara:</th>
+                                <th>Fjöldi:</th>
+                                <th>Verð:</th>
+
+                            </head>
+                            {% for cart_instance in product_cart %}
+                            <tr><td><img id="product_im" class="product_im" src="{{ cart_instance.products.product_image_set.first_image }}"/></td><td>{{ cart_instance.products.name }}</td><td>{{ cart_instance.quantity }}</td><td>{{ cart_instance.products.price }}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+
 
                 </div>
             </form>
         </div>
     </div>
   </div>
+     <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'checkout-payment' %}" > &#x2190; Til baka</a>
+         <a style="float:right; margin:5xp;" class="btn btn-default" href="{% url 'checkout-ordered' %}">Staðfesta</a>
+    </div>
     </div>
 {% endblock %}

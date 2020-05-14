@@ -7,6 +7,7 @@ from account.models import account_image
 from user.forms.create_user import ProfileCreateForm
 from django.contrib.auth.decorators import login_required
 
+
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
@@ -53,4 +54,10 @@ def create_user(request):
         'form': form,
     })
 
+@login_required
+def show_user(request):
+    account_info = account.objects.filter(user=request.user).first()
+    return render(request,'user/my_account.html',{
+        'account_info':account_info
+    })
 
