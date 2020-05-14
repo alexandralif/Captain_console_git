@@ -19,16 +19,24 @@
         <li class="things">
             <a href="" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="flase">Leikjatölvur <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="/all_computers" >Allar leikjatölvur</a></li>
+                <li><a href="/computers" >Allar leikjatölvur</a></li>
                 <li><a href="/1">Nintendo</a></li>
-                <li><a href="/2">Game boy</a></li>
+                <li><a href="/2">GameBoy</a></li>
                 <li><a href="/3">Playstation</a></li>
                 <li><a href="/4">Xbox</a></li>
 
 
             </ul>
       </li>
-        <li><a class="things" href="/games">Tölvuleikir</a></li>
+        <li class="things"><a href="" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="flase">Tölvuleikir <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="/games" >Allir tölvuleikir</a></li>
+                <li><a href="/nintendo_games">Nintendo leikir</a></li>
+                <li><a href="/gameboy_games">GameBoy leikir</a></li>
+                <li><a href="/playstation_games">Playstation leikir</a></li>
+                <li><a href="/xbox_games">Xbox leikir</a></li>
+
+            </ul></li>
         {% if user.is_authenticated %}
             <li><a class="things" href="{% url 'logout' %}">Útskrá</a></li>
             <li><a class="things" href="{% url 'my_account' %}">Mínar síður <span class="glyphicon glyphicon-user"></span></a></li>

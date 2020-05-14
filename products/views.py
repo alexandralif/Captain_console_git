@@ -18,6 +18,7 @@ def index(request):
     context ={'products': products.objects.all().order_by('name')}
     return render(request, "products/index.html", context)
 
+
 def get_product_by_id(request,id):
     return render(request, 'products/product_details.html', {
         'products': get_object_or_404(products, pk=id)
@@ -78,19 +79,59 @@ def get_xbox_products(request):
 def get_nintendo_games(request):
     '''this function get's all products that have the same manufacturer'''
     context = {'products': products.objects.filter(type_id=2).filter(category_id=1)}
-    return render(request, "products/games.html", context)
+    return render(request, "products/nintendo_games.html", context)
 
 def get_gameboy_games(request):
     '''this function get's all products that have the same manufacturer'''
     context = {'products': products.objects.filter(type_id=2).filter(category_id=2)}
-    return render(request, "products/games.html", context)
+    return render(request, "products/gameboy_games.html", context)
 
 def get_playstation_games(request):
     '''this function get's all products that have the same manufacturer'''
     context = {'products': products.objects.filter(type_id=2).filter(category_id=3)}
-    return render(request, "products/games.html", context)
+    return render(request, "products/playstation_games.html", context)
 
 def get_xbox_games(request):
     '''this function get's all products that have the same manufacturer'''
     context = {'products': products.objects.filter(type_id=2).filter(category_id=4)}
-    return render(request, "products/games.html", context)
+    return render(request, "products/xbox_games.html", context)
+
+def order_nintendo_by_name(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=1).order_by('name')}
+    return render(request, "products/nintendo_games.html", context)
+
+def order_nintendo_by_price(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=1).order_by('price')}
+    return render(request, "products/nintendo_games.html", context)
+
+def order_gameboy_by_name(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=2).order_by('name')}
+    return render(request, "products/gameboy_games.html", context)
+
+def order_gameboy_by_price(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=2).order_by('price')}
+    return render(request, "products/gameboy_games.html", context)
+
+def order_playstation_by_name(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=3).order_by('name')}
+    return render(request, "products/playstation_games.html", context)
+
+def order_playstation_by_price(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=3).order_by('price')}
+    return render(request, "products/playstation_games.html", context)
+
+def order_xbox_by_name(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=4).order_by('name')}
+    return render(request, "products/xbox_games.html", context)
+
+def order_xbox_by_price(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=4).order_by('price')}
+    return render(request, "products/xbox_games.html", context)
