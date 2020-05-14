@@ -1,4 +1,9 @@
+from datetime import datetime
+
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
+
+from SearchHistory.models import Product_history
 from products.models import products
 from django.http import JsonResponse
 
@@ -19,6 +24,11 @@ def index(request):
     return render(request, "products/index.html", context)
 
 def get_product_by_id(request,id):
+    if request.user.is_authenticated:
+        u = User.objects.filter(pk=request.user.id).first()
+        p = products.objects.filter(pk=id).first()
+        ph = Product_history(product_id = p, user = u, date = datetime.now())
+        ph.save()
     return render(request, 'products/product_details.html', {
         'products': get_object_or_404(products, pk=id)
     })
