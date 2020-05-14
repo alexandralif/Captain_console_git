@@ -3,6 +3,7 @@ from django.db import models
 
 from products.models import products
 
+
 # Create your models here.
 class personal_info(models.Model):
     '''this is our model for personal/shipping information when ordering a product'''
@@ -17,6 +18,7 @@ class personal_info(models.Model):
 
 class payment(models.Model):
     '''this is our payment model for paying for an order'''
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     cardholder = models.CharField(max_length=255)
     card_num = models.IntegerField(max_length=16)
     exp_month = models.IntegerField(max_length=2)

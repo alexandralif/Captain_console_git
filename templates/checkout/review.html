@@ -1,4 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
-  <p>Review síða </p>
+    <div id="header-review"><h1>Yfirlit yfir pöntun</h1> </div>
+  <div class="row">
+    <div class="col-lg-6">
+        <div class="box-element" id="form-wrapper">
+            <form id="form">
+                <div id="pers_info" >
+                    <p>Upplýsingar um kaupanda:</p>
+                    <div class="tab">
+                        <p>Nafn:</p> {{ pers_info.name }}
+                        <p>Götuheiti:</p> {{ pers_info.street_name }}
+                        <p>Húsnúmer:</p> {{ pers_info.house_num }}
+                        <p>Land:</p> {{ pers_info.country }}
+                        <p>Bæjarfélag:</p> {{ pers_info.city }}
+                        <p>Póstnúmer:</p> {{ pers_info.zip }}
+                    </div>
+
+                </div>
+                <div id="paym_info" >
+                    <p>Kortaupplýsingar:</p>
+                    <div class="tab">
+                        <p>Kortahafi:</p> {{ payment_info.cardholder }}
+                        <p>Kortanúmer:</p> {{ payment_info.cardnumber }}
+                        <p>exp_month:</p> {{ payment_info.exp_month }}
+                        <p>exp_year:</p> {{ payment_info.exp_year }}
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+  <div class="col-lg-6">
+        <div class="box-element" id="form-wrapper">
+             <form id="form">
+                <div id="product-info" >
+
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+    </div>
 {% endblock %}
