@@ -14,7 +14,7 @@
     </head>
             {% for product in cart %}
                 <tr><td><img id="computer_im" class="computer-img" src="{{ product.products.product_image_set.first.image }}" /></td><td>{{ product.products.name }}</td><td>{{ product.quantity }}</td><td>{{ product.products.price }}</td>
-                <td><a class="btn btn-info" href="{% url 'remove_from_cart' product.id %}" role="button">Eyða úr körfu</a></td>
+                <td><a class="btn btn-default" href="{% url 'remove_from_cart' product.id %}" role="button">Eyða úr körfu</a></td>
                 </tr>
         {% endfor %}
       <foot>
@@ -36,8 +36,8 @@
     </table>
 
 
-    <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'products-index' %}" > &#x2190; Halda áfram að versla</a>
-     <a style="float:right; margin:5xp;" class="btn btn-success" href="{% url 'checkout-add_personal_info' %}">Ganga frá pöntun</a>
+    <a style="float:left; margin:5px;" class="btn btn-default" href="{% url 'products-index' %}" > &#x2190; Halda áfram að versla</a>
+     <a style="float:right; margin:5xp;" class="btn btn-default" href="{% url 'checkout-add_personal_info' %}">Ganga frá pöntun</a>
 
     </div>
     <br>
