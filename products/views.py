@@ -26,7 +26,7 @@ def get_product_by_id(request,id):
 def get_all_games(request):
     '''this is a function that groups all the games in one'''
     context = {'products': products.objects.filter(type_id=2)}
-    return render(request, "products/index.html", context)
+    return render(request, "products/games.html", context)
 
 def get_all_computers(request):
     '''this is a function that groups all the computers in one'''
@@ -43,6 +43,17 @@ def ordered_by_name(request):
     '''this is product that orders the products by name'''
     context = {'products': products.objects.all().order_by('name')}
     return render(request, "products/index.html", context)
+
+def order_games_by_name(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).order_by('name')}
+    return render(request, "products/index.html", context)
+
+def order_games_by_price(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=2).order_by('price')}
+    return render(request, "products/index.html", context)
+
 
 def get_nintendo_products(request):
     '''this function get's all products that have the same manufacturer'''
@@ -63,3 +74,23 @@ def get_xbox_products(request):
     '''this function get's all products that have the same manufacturer'''
     context = {'products': products.objects.filter(category_id=4)}
     return render(request, "products/index.html", context)
+
+def get_nintendo_games(request):
+    '''this function get's all products that have the same manufacturer'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=1)}
+    return render(request, "products/games.html", context)
+
+def get_gameboy_games(request):
+    '''this function get's all products that have the same manufacturer'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=2)}
+    return render(request, "products/games.html", context)
+
+def get_playstation_games(request):
+    '''this function get's all products that have the same manufacturer'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=3)}
+    return render(request, "products/games.html", context)
+
+def get_xbox_games(request):
+    '''this function get's all products that have the same manufacturer'''
+    context = {'products': products.objects.filter(type_id=2).filter(category_id=4)}
+    return render(request, "products/games.html", context)
