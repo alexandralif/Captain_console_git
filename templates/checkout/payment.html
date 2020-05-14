@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+    <div class="col-6">
+        <h4>Kortaupplýsingar</h4>
     <form class="form form-horizontal" action="{% url 'checkout-payment'%}"method="post">
                    {% csrf_token %}
                    {{ form }}
@@ -10,4 +12,5 @@
                     <a style="float:right; margin: 5px;" value="Create" class="btn btn-success" href="{% url 'checkout-review' %}"> Halda áfram</a>
 
                </form>
+    </div>
 {% endblock %}
