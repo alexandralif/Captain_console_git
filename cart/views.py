@@ -39,8 +39,13 @@ def remove_from_cart(request,id):
 
     p = products.objects.filter(pk=id).first()
     u = User.objects.filter(pk=request.user.id).first()
-    cart = Cart.objects.filter(user=u, products=p,).first()
+    cart = Cart.objects.filter(user=u, products=p).first()
+    print(id)
+    print(p)
+    print(u)
+    print(cart)
     if cart.quantity > 1: #if the quantity of the product is bigger than one
+
         cart.quantity -=1 #we only have to lower the quantity and remove one of that item
         cart.save()
     else:      #else we have to delet the entire item from the cart
@@ -52,7 +57,7 @@ def remove_from_cart(request,id):
         'products': get_object_or_404(products, pk=id)
     })
 
-#def delete_all_cart()
+
 
 
 

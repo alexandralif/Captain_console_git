@@ -2,12 +2,13 @@
 {% load static %}
 {% block content %}
 
-               <form class="form form-horizontal" action="{% url 'checkout-add_personal_info' %}"method="post">
+               <form class="form form-horizontal" action="{% url 'checkout-add_personal_info'%}"method="post">
                    {% csrf_token %}
                    {{ form }}
                         <a style="float:left; margin:5px;" class="btn btn-default" href="{% url 'cart-index' %}" > &#x2190; Til baka</a>
+                <input type="submit"  style="float:end ; margin:5px;" value="Staðfesta upplýsingar" class="btn btn-success"/>
+                    <a style="float:right; margin: 5px;" value="Create" class="btn btn-success" href="{% url 'checkout-payment' %}"> Halda áfram</a>
 
-                <a style="float:right; margin: 5px;" value="Create" class="btn btn-default" href="{% url 'checkout-payment' %}"> Halda áfram</a>
                </form>
 
 {% endblock %}

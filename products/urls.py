@@ -26,4 +26,6 @@ urlpatterns = [
     path("order_playstation_by_price", views.order_playstation_by_price, name="order_playstation_by_price"),
     path("order_xbox_by_name", views.order_xbox_by_name, name="order_xbox_by_name"),
     path("order_xbox_by_price", views.order_xbox_by_price, name="order_xbox_by_price"),
+    path("order_computers_by_name", views.order_computers_by_name, name="order_computers_by_name"),
+    path("order_computers_by_price", views.order_computers_by_price, name="order_computers_by_price"),
 ]
