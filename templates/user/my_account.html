@@ -6,19 +6,18 @@
         <p> Notandanafn: {{ user.username }}</p>
          <p> Fornafn: {{ user.first_name }}</p>
         <p> Eftirnafn: {{ user.last_name }}</p>
-
+    <form id="form">
         <div class="my_table">
         <table class="table">
          <th>Notandanafn:</th>
-        <th>Eftirnafn:: </th>
+        <th>Eftirnafn: </th>
         <th>Mynd </th>
+            <tr> <td>{{ user.username }} </td> <td> {{user.person_info.first_name }}</td> </tr>
 
-         {% for info in form %}
-             <tr> <td>{{ info.user.username }} </td> <td> {{ info. }}</td> </tr>
-         {% endfor %}
 
          <a style="float:right; margin: 5px;" class="btn btn-default" href="{% url 'create_user' %}"> Setja inn upplýsingar</a>
         </table>
         </div>
+    </form>
 
 {% endblock %}
