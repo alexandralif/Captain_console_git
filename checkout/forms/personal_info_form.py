@@ -33,7 +33,7 @@ class PersonalForm(ModelForm):
      #   url =
 
     def check_streetname(self):
-        street_name = self.cleaned_data['street_name']
-        if not street_name.endswith('grund'):
-            raise ValidationError('street not exist')
+        street_name = self.cleaned_data['street-name']
+        if len(street_name)<4:
+            raise forms.ValidationError('street not exist')
         return street_name

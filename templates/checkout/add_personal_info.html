@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+    <div class="col-6">
+        <h4>Kaupenda upplýsingar</h4>
                <form class="form form-horizontal" action="{% url 'checkout-add_personal_info'%}"method="post">
                    {% csrf_token %}
                    {{ form }}
@@ -10,5 +11,6 @@
                     <a style="float:right; margin: 5px;" value="Create" class="btn btn-success" href="{% url 'checkout-payment' %}"> Halda áfram</a>
 
                </form>
+     </div>
 
 {% endblock %}
