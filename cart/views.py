@@ -4,6 +4,8 @@ from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from cart.models import Cart
 from products.models import products
+from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
 
 
 @login_required
@@ -26,9 +28,13 @@ def add_to_cart(request, id):
         #c=Cart.objects.filter(user=u,products=p,quantity=1).first()
         new_cart = Cart(user=u, products=p,quantity=1)
         new_cart.save()
-    return render(request, 'products/product_details.html', {
-       'products': get_object_or_404(products, pk=id)
-    })
+    context = {}
+    #return render(request,'products/index.html',context)
+    return redirect(index)
+
+   # return render(request, 'products/product_details.html', {
+#  'products': get_object_or_404(products, pk=id)
+ #   })
 
 @login_required
 def remove_from_cart(request,id):
@@ -53,10 +59,16 @@ def remove_from_cart(request,id):
     #return render(request, 'cart/index.html', {
     #    'products': get_object_or_404(products, pk=id)
     #})
-    return render(request, 'products/product_details.html', {
-        'products': get_object_or_404(products, pk=id)
-    })
+    return redirect(index)
+    #return render(request, 'products/product_details.html', {
+     #   'products': get_object_or_404(products, pk=id)
+    #})
 
+
+def clear_cart(request):
+        Cart.objects.filter(user_id=request.user.id).delete()
+        context = {}
+        return render(request, 'cart/index.html', context)
 
 
 
