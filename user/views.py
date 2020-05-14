@@ -58,8 +58,10 @@ def create_user(request):
 @login_required
 def show_user(request):
     account_info = account.objects.filter(user=request.user).first()
+    account_photo = account_image.objects.first()
     return render(request,'user/my_account.html',{
-        'account_info':account_info
+        'account_info':account_info,
+        'account_photo': account_photo
     })
 
 #def review_info(request, id):

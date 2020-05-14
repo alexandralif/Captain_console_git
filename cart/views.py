@@ -65,6 +65,7 @@ def remove_from_cart(request,id):
     #})
 
 
+@login_required
 def clear_cart(request):
         Cart.objects.filter(user_id=request.user.id).delete()
         context = {}

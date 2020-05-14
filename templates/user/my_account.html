@@ -7,6 +7,7 @@
 
          <p> Fornafn: {{ account_info.first_name }}</p>
         <p> Eftirnafn: {{ account_info.last_name }}</p>
+         <p> Mynd: </p> <img id="computer_im" class="computer-img" src="{{ account_photo.image_set.first.image }}" />
 
    <!-- <form id="form">
         <div class="my_table">
@@ -15,12 +16,12 @@
         <th>Eftirnafn: </th>
         <th>Mynd </th>
             <tr> <td>{{ user.username }} </td> <td> {{user.person_info.first_name }}</td> </tr>
-
-
-
-         <a style="float:right; margin: 5px;" class="btn btn-default" href="{% url 'create_user' %}"> Setja inn upplýsingar</a>
-        </table>
+              </table>
         </div>
-    </form>-->
+            </form>-->
+
+         <a style="float:right; margin: 5px;" class="btn btn-default" href="{% url 'create_user' %}"> Setja inn upplýsingar / Breyta upplýsingum</a>
+
+
 
 {% endblock %}
