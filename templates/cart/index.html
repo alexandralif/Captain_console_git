@@ -12,9 +12,9 @@
         <th>Verð: </th>
         <th>Eyða vöru úr körfu</th>
     </head>
-            {% for product in cart %}
-                <tr><td><img id="computer_im" class="computer-img" src="{{ product.products.product_image_set.first.image }}" /></td><td>{{ product.products.name }}</td><td>{{ product.quantity }}</td><td>{{ product.products.price }}</td>
-                <td><a class="btn btn-info" href="{% url 'remove_from_cart' product.id %}" role="button">Eyða úr körfu</a></td>
+            {% for cart_instance in cart %}
+                <tr><td><img id="computer_im" class="computer-img" src="{{ cart_instance.products.product_image_set.first.image }}" /></td><td>{{ cart_instance.products.name }}</td><td>{{ cart_instance.quantity }}</td><td>{{ cart_instance.products.price }}</td>
+                <td><a class="btn btn-info" href="{% url 'remove_from_cart' cart_instance.products_id %}" role="button">Eyða úr körfu</a></td>
                 </tr>
         {% endfor %}
       <foot>
@@ -25,8 +25,8 @@
                 <th><script>
             total_price=0
             new_product = 0
-                    {% for product in cart %}
-                        new_product = {{ product.products.price }} *{{ product.quantity }}
+                    {% for cart_instance in cart %}
+                        new_product = {{ cart_instance.products.price }} *{{ cart_instance.quantity }}
                         total_price  += new_product
                     {% endfor %}
           document.write("Verð samtals: " + total_price + " kr")
