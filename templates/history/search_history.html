@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <H1>Leitarsagan þín</H1>
+     <br>
+    <div class="my_table">
+    <table class="table">
+    <head>
+        <th>Mynd</th>
+        <th>Vara: </th>
+        <th>Fjöldi: </th>
+        <th>Verð: </th>
+        <th>Eyða vöru úr körfu</th>
+    </head>
+            {% for click in ph %}
+                <tr><td><img id="computer_im" class="computer-img" src="{{ click.products.product_image_set.first.image }}" /></td>
+                <td>{{ click.products.name }}</td> <td>{{ click.date }}</td>
+                </tr>
+    {% endfor %}
+
+    </table>
+
+    </div>
+    <br>
+{% endblock %}
