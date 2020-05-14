@@ -7,6 +7,13 @@
     font-size: medium;
     padding-right: 5px;
 }
+
+.things-right{
+    font-size: medium;
+    padding-right: 5px;
+    float:right;
+}
+
 .takkar{
     padding-right: 3px;
     padding-top: 3px;

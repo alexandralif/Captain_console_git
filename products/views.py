@@ -1,8 +1,6 @@
 from datetime import datetime
-
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
-
 from SearchHistory.models import Product_history
 from products.models import products
 from django.http import JsonResponse
@@ -36,13 +34,35 @@ def get_product_by_id(request,id):
 
 def get_all_games(request):
     '''this is a function that groups all the games in one'''
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        product = [{
+            'id': x.id,
+            'name': x.name,
+            'description': x.description,
+            'price': x.price,
+            'firstImage': x.product_image_set.first().image
+        } for x in products.objects.filter(name__icontains=search_filter).filter(type_id=2)]
+        print(product)
+        return JsonResponse({'data': product})
     context = {'products': products.objects.filter(type_id=2)}
     return render(request, "products/games.html", context)
 
 def get_all_computers(request):
     '''this is a function that groups all the computers in one'''
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        product = [{
+            'id': x.id,
+            'name': x.name,
+            'description': x.description,
+            'price': x.price,
+            'firstImage': x.product_image_set.first().image
+        } for x in products.objects.filter(name__icontains=search_filter).filter(type_id=1)]
+        print(product)
+        return JsonResponse({'data': product})
     context = {'products': products.objects.filter(type_id=1)}
-    return render(request, "products/index.html", context)
+    return render(request, "products/computers.html", context)
 
 def ordered_by_price(request):
     '''this is a function that orders the products by price'''
@@ -65,6 +85,15 @@ def order_games_by_price(request):
     context = {'products': products.objects.filter(type_id=2).order_by('price')}
     return render(request, "products/index.html", context)
 
+def order_computers_by_name(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=1).order_by('name')}
+    return render(request, "products/computers.html", context)
+
+def order_computers_by_price(request):
+    '''this is product that orders the products by name'''
+    context = {'products': products.objects.filter(type_id=1).order_by('price')}
+    return render(request, "products/computers.html", context)
 
 def get_nintendo_products(request):
     '''this function get's all products that have the same manufacturer'''

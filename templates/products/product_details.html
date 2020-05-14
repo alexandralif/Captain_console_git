@@ -3,7 +3,7 @@
     <div class="product_deatails">
     <h1>{{ products.name }}</h1>
     <p>{{ products.description }}</p>
-    <p>{{ products.price }}kr.</p>
+    <h3>Verð: {{ products.price }}kr.</h3>
     {% for product_image in products.product_image_set.all %}
         <img src="{{ product_image.image }}" class="computer-img"/>
     {% endfor %}<br/>

@@ -54,10 +54,24 @@ def create_user(request):
         'form': form,
     })
 
+
 @login_required
 def show_user(request):
     account_info = account.objects.filter(user=request.user).first()
     return render(request,'user/my_account.html',{
         'account_info':account_info
     })
+
+#def review_info(request, id):
+ #   if request.method == 'GET':
+  #      if request.user.is_authenticated:
+   #         person_info = account.objects.filter(user=request.user, pk =id).first()
+    #        image = account_image.product_image_set.first().image
+
+   # return render(request, 'user/my_account.html', {
+    #    'person_info': person_info,
+     #   'image': image
+   # })
+
+
 
