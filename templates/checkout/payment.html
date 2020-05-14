@@ -1,44 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-   <div class="row">
-    <div class="col-lg-6">
-        <div class="box-element" id="form-wrapper">
-            <form id="form">
+    <form class="form form-horizontal" action="{% url 'checkout-payment'%}"method="post">
+                   {% csrf_token %}
+                   {{ form }}
+                        <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'checkout-add_personal_info' %}" > &#x2190; Til baka</a>
 
-                <div id="user-info">
-                    <div class="form-field">
-                        <input required class="form-control" type="text" name="cardholder" placeholder="Korthafi">
-                    </div>
+                <input type="submit"  style="float:end ; margin:5px;" value="Staðfesta upplýsingar" class="btn btn-success"/>
+                    <a style="float:right; margin: 5px;" value="Create" class="btn btn-success" href="{% url 'checkout-review' %}"> Halda áfram</a>
 
-                    <div class="form-field">
-                        <input required class="form-control" type="text" name="cardnumber" placeholder="Kortanúmer">
-                    </div>
-                     <div class="form-field">
-                       <p>Gildistími</p> <input required class="form-control" type="text" name="exp_month" placeholder="Mánuður">
-                         <input required class="form-control" type="text" name="exp_year" placeholder="ár">
-                    </div>
-                    <div class="form-field">
-                        <input required class="form-control" type="text" name="cvc" placeholder="Öryggisnúmer">
-                    </div>
-
-
-                </div>
-
-                <div id="shipping-info">
-
-                </div>
-                <a style="float:left; margin:5px;" class="btn btn-default" href="{% url 'checkout-add_personal_info' %}" > &#x2190; Til baka</a>
-
-                <a style="float:right; margin: 5px;" class="btn btn-default" href="{% url 'checkout-review' %}"> Halda áfram</a>
-                <hr>
-            </form>
-        </div>
-    </div>
-    <div class="col-lg-6">
-        <div class="box-element">
-
-        </div>
-    </div>
-   </div>
+               </form>
 {% endblock %}
