@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
-
+from django.forms import ValidationError
 from products.models import products
-
+#from checkout.forms.payment_info import card_num
 
 # Create your models here.
 class personal_info(models.Model):
@@ -15,12 +15,17 @@ class personal_info(models.Model):
     city = models.CharField(max_length=255)
     zip = models.CharField(max_length=255)
 
+def card_num(value):
+    if value != 10:
+        raise ValidationError('this is custom valdiation error')
+        print(value)
+
 
 class payment(models.Model):
     '''this is our payment model for paying for an order'''
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     cardholder = models.CharField(max_length=255)
-    card_num = models.IntegerField(max_length=16)
+    card_num = models.IntegerField(max_length=16,validators=[card_num])
     exp_month = models.IntegerField(max_length=2)
     exp_year = models.IntegerField(max_length=2)
     cvc = models.IntegerField(max_length=3)

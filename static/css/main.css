@@ -13,6 +13,18 @@
     padding-right: 5px;
     float:right;
 }
+.input-group{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#search-box.form-control{
+    width: 20%;
+}
+.input-group-btn{
+    width: 40%;
+}
 
 .takkar{
     padding-right: 3px;
@@ -124,16 +136,22 @@ a {
 
 }
 .computers {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-bottom: 15px;
-    padding-top: 10px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 100%;
+
 }
 
 .computer a {
     color: black !important;
     text-decoration: none;
 }
+.well.computer{
+    width: 380px;
+    height: 370px;
+}
+
 .computers .computer {
     border-radius: 0;
     margin: 0;
@@ -154,7 +172,7 @@ a {
 
 .games {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
 }
 
 
@@ -230,4 +248,42 @@ footer {
 
 .box{
     border-radius: 0 0 4px 4px;
+}
+@media(max-width: 650px){
+    .footerBox{
+        width: 49%;
+        text-indent: 5%;
+        display: inline-block;
+        box-sizing: border-box;
+        min-height: 150px;
+
+    }
+    .roundCornerBox{
+        width: 100%;
+    }
+    head{
+        width: 100%;
+    }
+    footer{
+        width: 100%;
+    }
+    .computers{
+
+    }
+
+
+}
+
+
+@media (max-width: 1000px){
+    .footerBox{
+        width: 45%;
+    }
+    .roundCornerBox{
+        width: 100%;
+
+    }
+    body{
+
+    }
 }
