@@ -23,6 +23,7 @@ def index(request):
 
 
 def get_product_by_id(request,id):
+    '''this functions gets a product by there id'''
     if request.user.is_authenticated:
         u = User.objects.filter(pk=request.user.id).first()
         p = products.objects.filter(pk=id).first()
