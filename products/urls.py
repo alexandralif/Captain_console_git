@@ -11,7 +11,7 @@ urlpatterns = [
     path("playstation", views.get_playstation_products, name="get_playstation_products"),
     path("xbox", views.get_xbox_products, name="get_xbox_products"),
     path("games", views.get_all_games, name="get_all_games"),
-    path("computers/", views.get_all_computers, name="get_all_computers"),
+    path('computers/', views.get_all_computers, name="get_all_computers"),
     path("order_games_by_name", views.order_games_by_name, name="order_games_by_name"),
     path("order_games_by_price", views.order_games_by_price, name="order_games_by_price"),
     path("nintendo_games", views.get_nintendo_games, name="get_nintendo_games"),
@@ -28,4 +28,5 @@ urlpatterns = [
     path("order_xbox_by_price", views.order_xbox_by_price, name="order_xbox_by_price"),
     path("order_computers_by_name", views.order_computers_by_name, name="order_computers_by_name"),
     path("order_computers_by_price", views.order_computers_by_price, name="order_computers_by_price"),
+
 ]
