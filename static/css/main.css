@@ -17,14 +17,12 @@
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
 }
 #search-box.form-control{
     width: 20%;
 }
-.input-group-btn{
-    width: 60%;
-}
+
 
 .takkar{
     padding-right: 3px;
@@ -64,6 +62,9 @@ img.logo{
     overflow: hidden;
 }
 
+.navbar.navbar-default{
+
+}
 .navbar-brand {
     position: relative;
 }
@@ -260,7 +261,7 @@ footer {
     border-radius: 0 0 4px 4px;
 }
 
-@media(max-width: 650px){
+@media screen and (max-width: 650px){
     .footerBox{
         width: 49%;
         text-indent: 5%;
@@ -278,15 +279,12 @@ footer {
     footer{
         width: 100%;
     }
-    .computers{
-
-    }
 
 
 }
 
 
-@media (max-width: 1000px){
+@media screen and (max-width: 1000px){
     .footerBox{
         width: 45%;
     }
@@ -296,6 +294,38 @@ footer {
     }
     body{
 
+    }
+
+    .dropdown-sia{
+        padding-left: 5px;
+    }
+    .input-group{
+        max-width: 90%;
+        flex-wrap: wrap;
+    }
+     .nav.navbar-nav{
+        width: max-content;
+
+    }
+    #bs-example-navbar-collapse-1{
+        width: max-content;
+    }
+}
+
+@media (max-width: 700px){
+
+    .input-group{
+        flex-wrap: wrap;
+    }
+    .dropdown-sia{
+        padding-left: 5px;
+    }
+    .nav.navbar-nav{
+        width: max-content;
+
+    }
+    #bs-example-navbar-collapse-1{
+        width: max-content;
     }
 }
 

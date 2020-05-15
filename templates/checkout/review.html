@@ -55,7 +55,7 @@
 
                             </head>
                             {% for cart_instance in product_cart %}
-                            <tr><td><img id="product_im" class="product_im" src="{{ cart_instance.products.product_image_set.first.image }}"/></td><td>{{ cart_instance.products.name }}</td><td>{{ cart_instance.quantity }}</td><td>{{ cart_instance.products.price }}</td>
+                            <tr><td><img id="product_im" class="computer-img" src="{{ cart_instance.products.product_image_set.first.image }}"/></td><td>{{ cart_instance.products.name }}</td><td>{{ cart_instance.quantity }}</td><td>{{ cart_instance.products.price }}</td>
                             </tr>
                             {% endfor %}
                         <foot>
