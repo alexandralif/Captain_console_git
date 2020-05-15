@@ -10,11 +10,13 @@
         <th>Mynd:</th>
         <th>Heiti vöru: </th>
         <th>Dagsetning: </th>
+        <th>Skoða vöru</th>
+        <th></th>
         <head>
 
             {% for click in search_info %}
                 <tr><td><img id="search_im" class="computer-img" src="{{ click.product_id.product_image_set.first.image }}" /></td>
-                <td>{{ click.product_id.id }}</td> <td>{{ click.date }}</td>
+                <td>{{ click.product_id.id }}</td> <td>{{ click.date }}<td/> <td><a style="float:right; margin: 5px;" href="{% url 'product_details' click.product_id.id %}" class="btn btn-default" role="button">Skoða vöru </a></td>
                 </tr>
     {% endfor %}
 </table>
