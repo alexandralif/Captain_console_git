@@ -4,6 +4,16 @@ from django.forms import ValidationError
 from products.models import products
 #from checkout.forms.payment_info import card_num
 
+
+
+def zip_info(value):
+    try:
+        int(value)
+    except ValueError:
+        raise ValidationError('Einungis hægt að slá inn tölustafi')
+
+
+
 # Create your models here.
 class personal_info(models.Model):
     '''this is our model for personal/shipping information when ordering a product'''
@@ -13,32 +23,32 @@ class personal_info(models.Model):
     house_num = models.CharField(max_length=10)
     country = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
-    zip = models.CharField(max_length=255)
+    zip = models.CharField(max_length=255,validators=[zip_info])
 
 def card_num(value):
     if len(str(value)) != 16:
         raise ValidationError('Kortanúmer verður að vera af lengd 16')
-    if value != int:
-        raise ValidationError
+
+def cvc_num(value):
+    if len(str(value)) != 3:
+        raise ValidationError('CVC verður að vera af lengd 3')
 
 
-def card_month(value):
-    if len(str(value)) != 2:
-        raise  ValidationError("Mánuður verður að vera af lengd 2")
 
 
 class payment(models.Model):
     '''this is our payment model for paying for an order'''
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     cardholder = models.CharField(max_length=255)
-    card_num = models.IntegerField(max_length=16,validators=[card_num])
-    exp_month = models.IntegerField(max_length=2,validators=[card_month],default="MM")
-    exp_year = models.IntegerField(max_length=2)
-    cvc = models.IntegerField(max_length=3)
+    card_num = models.CharField(max_length=255,validators=[card_num])
+    exp_month = models.CharField(max_length=2)
+    exp_year = models.CharField(max_length=2)
+    cvc = models.CharField(max_length=3,validators=[cvc_num])
 
 class Order(models.Model):
     '''this is our oredr model'''
-    user = models.ForeignKey(personal_info, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    info = models.ForeignKey(personal_info, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
     confirmed = models.BooleanField(default=False)
     payment = models.ForeignKey(payment, on_delete=models.CASCADE)

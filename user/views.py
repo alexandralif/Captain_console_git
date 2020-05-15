@@ -1,11 +1,16 @@
+from datetime import datetime
+
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from account.models import account
 from account.models import account_image
+from checkout.models import Order, Order_item
+from products.models import products
 from user.forms.create_user import ProfileCreateForm
 from django.contrib.auth.decorators import login_required
+
 
 
 def register(request):
@@ -64,16 +69,26 @@ def show_user(request):
         'account_info':account_info
     })
 
-#def review_info(request, id):
- #   if request.method == 'GET':
-  #      if request.user.is_authenticated:
-   #         person_info = account.objects.filter(user=request.user, pk =id).first()
-    #        image = account_image.product_image_set.first().image
+@login_required
+def order_history(request):
+    u = User.objects.filter(pk=request.user.id).first()
 
-   # return render(request, 'user/my_account.html', {
-    #    'person_info': person_info,
-     #   'image': image
-   # })
+    users_order = Order.objects.filter(user=u).all()
+    orders = []
+    for order in users_order:
+        order_item_instances = Order_item.objects.filter(order=order).all()
+        products_ = []
+        for instance in order_item_instances:
+            p = products.objects.filter(pk=instance.products.id).first()
+            products_.append(p)
+        orders.append(products_)
+
+
+    return render(request,'user/order_history.html',{
+        'orders': orders,
+    })
+
+
 
 
 

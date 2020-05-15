@@ -10,5 +10,6 @@ urlpatterns = [
     #path('create_user', LoginView.as_view(template_name='user/create_user.html'), name="create_user")
     path('create_user', views.create_user, name="create_user"),
     #path('my_account',views.review_info, name='user-review_info'),
+    path('order_history',views.order_history,name='order_history')
 ]
 
