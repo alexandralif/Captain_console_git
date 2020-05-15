@@ -238,6 +238,7 @@ footer {
     padding: 3px;
 
 }
+
 #header_karfa.glyphicon.glyphicon-shopping-cart{
     font-size: medium;
     border: 0px solid;
@@ -261,71 +262,7 @@ footer {
     border-radius: 0 0 4px 4px;
 }
 
-@media screen and (max-width: 650px){
-    .footerBox{
-        width: 49%;
-        text-indent: 5%;
-        display: inline-block;
-        box-sizing: border-box;
-        min-height: 150px;
-
-    }
-    .roundCornerBox{
-        width: 100%;
-    }
-    head{
-        width: 100%;
-    }
-    footer{
-        width: 100%;
-    }
 
 
-}
 
-
-@media screen and (max-width: 1000px){
-    .footerBox{
-        width: 45%;
-    }
-    .roundCornerBox{
-        width: 100%;
-
-    }
-    body{
-
-    }
-
-    .dropdown-sia{
-        padding-left: 5px;
-    }
-    .input-group{
-        max-width: 90%;
-        flex-wrap: wrap;
-    }
-     .nav.navbar-nav{
-        width: max-content;
-
-    }
-    #bs-example-navbar-collapse-1{
-        width: max-content;
-    }
-}
-
-@media (max-width: 700px){
-
-    .input-group{
-        flex-wrap: wrap;
-    }
-    .dropdown-sia{
-        padding-left: 5px;
-    }
-    .nav.navbar-nav{
-        width: max-content;
-
-    }
-    #bs-example-navbar-collapse-1{
-        width: max-content;
-    }
-}
 
