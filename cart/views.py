@@ -1,6 +1,5 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from cart.models import Cart
 from products.models import products
@@ -35,9 +34,8 @@ def add_to_cart(request, id):
 
 @login_required
 def remove_from_cart(request,id):
-    '''this is our remover from cart function. It removes a product from the
+    '''this is our remove from cart function. It removes single instance of a product from the
     cart.'''
-
     p = products.objects.filter(pk=id).first()
     u = User.objects.filter(pk=request.user.id).first()
     cart = Cart.objects.filter(user=u, products=p).first()
@@ -46,19 +44,16 @@ def remove_from_cart(request,id):
     print(u)
     print(cart)
     if cart.quantity > 1: #if the quantity of the product is bigger than one
-
         cart.quantity -=1 #we only have to lower the quantity and remove one of that item
         cart.save()
     else:      #else we have to delet the entire item from the cart
         cart.delete()
-
     return redirect(index)
 
 
 @login_required
 def clear_cart(request):
     '''this is our clear cart function. It clears the cart when the order is comfermed.'''
-
     Cart.objects.filter(user_id=request.user.id).delete()
     context = {}
     return render(request, 'cart/index.html', context)

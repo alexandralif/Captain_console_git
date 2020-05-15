@@ -1,28 +1,12 @@
 {% extends 'Base.html' %}
 {% block content %}
-     <div class="account_details">
+    <div class="account_details">
         <h1> Mínar síður</h1>
-
-        <p> <b>Notendanafn:</b> {{ user.username }}</p>
-
-         <p> <b>Fornafn:</b>  {{ account_info.first_name }}</p>
+        <p><b>Notendanafn:</b> {{ user.username }}</p>
+        <p><b>Fornafn:</b> {{ account_info.first_name }}</p>
         <p> <b> Eftirnafn:</b> {{ account_info.last_name }}</p>
-         <p> <b>Mynd:</b> </p> <img id="computer_im" class="computer-img" src="{{ account_info.account_image_set.last.image }}" />
+        <p><b>Mynd:</b> </p> <img id="computer_im" class="computer-img" src="{{ account_info.account_image_set.last.image }}"/>
 
-   <!-- <form id="form">
-        <div class="my_table">
-        <table class="table">
-         <th>Notandanafn:</th>
-        <th>Eftirnafn: </th>
-        <th>Mynd </th>
-            <tr> <td>{{ user.username }} </td> <td> {{user.person_info.first_name }}</td> </tr>
-              </table>
-        </div>
-            </form>-->
-
-         <a style="float:right; margin: 5px;" class="btn btn-default" href="{% url 'create_user' %}"> Setja inn upplýsingar / Breyta upplýsingum</a>
-         <a style="float:right; margin: 5px;" class="btn btn-default" href="{% url 'order_history' %}"> Skoða vörur sem ég hef pantað</a>
-
-
-
+        <a style="float:right; margin: 5px;" class="btn btn-default" href="{% url 'create_user' %}"> Setja inn upplýsingar / Breyta upplýsingum</a>
+        <a style="float:right; margin: 5px;" class="btn btn-default" href="{% url 'order_history' %}"> Skoða vörur sem ég hef pantað</a>
 {% endblock %}

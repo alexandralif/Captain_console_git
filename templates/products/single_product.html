@@ -3,10 +3,6 @@
         <img id="computer_im" class="computer-img" src="{{ product.product_image_set.first.image }}" />
         <h4 class="titill">{{ product.name }} <a style="float:right; margin: 5px;" href="{% url 'add_to_cart' product.id %}"  class="btn btn-outline-secondary add-btn add_to_cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></h4>
         <p>{{ product.price }} kr.</p>
-       <!-- <button type="button" class="btn btn-outline-secondary add-btn update-cart" onclick="add_to_cart({{ product.id }}">
-            <span class="glyphicon glyphicon-shopping-cart"></span></button>
-        <a href="{% url 'cart-index' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>-->
     </a>
-
 </div>
 
