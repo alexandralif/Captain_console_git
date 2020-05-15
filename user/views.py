@@ -61,8 +61,7 @@ def show_user(request):
     account_photo = account_image.objects.filter(user=account_info).first()
 
     return render(request,'user/my_account.html',{
-        'account_info':account_info,
-        'account_photo': account_photo.image
+        'account_info':account_info
     })
 
 #def review_info(request, id):

@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <div class="col-6">
+    <div class="col-4">
         <h4>Upplýsingar um kaupanda</h4>
                <form class="form form-horizontal" action="{% url 'checkout-add_personal_info'%}"method="post">
                    {% csrf_token %}
-                   {{ form }}
+                   {{ form.as_p }}
                         <a style="float:left; margin:5px;" class="btn btn-default" href="{% url 'cart-index' %}" > &#x2190; Til baka</a>
                 <input type="submit"  style="float:end ; margin:5px;" value="Staðfesta upplýsingar" class="btn btn-success"/>
                     <a style="float:right; margin: 5px;" value="Create" class="btn btn-success" href="{% url 'checkout-payment' %}"> Halda áfram</a>

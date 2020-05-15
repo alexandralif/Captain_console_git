@@ -16,9 +16,15 @@ class personal_info(models.Model):
     zip = models.CharField(max_length=255)
 
 def card_num(value):
-    if value != 10:
-        raise ValidationError('this is custom valdiation error')
-        print(value)
+    if len(str(value)) != 16:
+        raise ValidationError('Kortanúmer verður að vera af lengd 16')
+    if value != int:
+        raise ValidationError
+
+
+def card_month(value):
+    if len(str(value)) != 2:
+        raise  ValidationError("Mánuður verður að vera af lengd 2")
 
 
 class payment(models.Model):
@@ -26,7 +32,7 @@ class payment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     cardholder = models.CharField(max_length=255)
     card_num = models.IntegerField(max_length=16,validators=[card_num])
-    exp_month = models.IntegerField(max_length=2)
+    exp_month = models.IntegerField(max_length=2,validators=[card_month],default="MM")
     exp_year = models.IntegerField(max_length=2)
     cvc = models.IntegerField(max_length=3)
 
