@@ -6,12 +6,12 @@
 .things{
     font-size: medium;
     padding-right: 5px;
+    text-align: center;
 }
 
 .things-right{
     font-size: medium;
     padding-right: 5px;
-    float:right;
 }
 .input-group{
     display: flex;
@@ -42,17 +42,21 @@
 
 .container-fluid{
     background-color: #87ADB8 !important;
-    height: 170px;
+    height: 175px;
 }
 .navbar-brand {
     width: 180px;
     height: 140px;
+    font-size: larger;
+    padding-right: 5px;
+    text-align: center;
 }
 img.logo{
     width: 160px;
     height: 150px;
     padding: 5px;
     position: center;
+    padding-bottom: 5px;
 
 }
 .navbar {
@@ -233,6 +237,11 @@ footer {
     padding: 3px;
 
 }
+#header_karfa.glyphicon.glyphicon-shopping-cart{
+    font-size: medium;
+    border: 0px solid;
+    padding: 0px;
+}
 
 .computer-img {
     width: 200px;
@@ -250,6 +259,7 @@ footer {
 .box{
     border-radius: 0 0 4px 4px;
 }
+
 @media(max-width: 650px){
     .footerBox{
         width: 49%;
@@ -288,3 +298,4 @@ footer {
 
     }
 }
+

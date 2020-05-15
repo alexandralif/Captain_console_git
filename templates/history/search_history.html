@@ -13,7 +13,7 @@
         <head>
 
             {% for click in search_info %}
-                <tr><td><img id="search_im" class="search-img" src="{{ click.product_id.product_image_set.first.image }}" /></td>
+                <tr><td><img id="search_im" class="computer-img" src="{{ click.product_id.product_image_set.first.image }}" /></td>
                 <td>{{ click.product_id.id }}</td> <td>{{ click.date }}</td>
                 </tr>
     {% endfor %}
