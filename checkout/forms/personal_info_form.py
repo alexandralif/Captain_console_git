@@ -1,8 +1,5 @@
 from django.forms import ModelForm,widgets
-
 from checkout.models import personal_info
-from django.forms import ValidationError
-
 
 from django import forms
 COUNTRIES = [
@@ -13,9 +10,12 @@ COUNTRIES = [
     ('england', 'England'),
     ('finland', 'Finland'),
     ('germany', 'Germany'),
+    ('poland','Poland'),
+    ('italy','Italy'),
 ]
 
 class PersonalForm(ModelForm):
+    '''This is a form for the personal information that the user puts in'''
     class Meta:
         model = personal_info
         exclude = ['id', 'user']
@@ -27,13 +27,3 @@ class PersonalForm(ModelForm):
             'city': widgets.TextInput(attrs={'class': 'form-control'}),
             'zip': widgets.NumberInput(attrs={'class': 'form-control'}),
         }
-
-
-    #class cleanUrlForm(forms.form):
-     #   url =
-
-    def check_streetname(self):
-        street_name = self.cleaned_data['street-name']
-        if len(street_name)<4:
-            raise forms.ValidationError('street not exist')
-        return street_name

@@ -17,7 +17,6 @@ def index(request):
 @login_required
 def clear_search_history(request):
     '''this functions clears out the search history'''
-
     Product_history.objects.filter(user_id=request.user.id).delete()
     context = {}
     return render(request, 'history/search_history.html', context)

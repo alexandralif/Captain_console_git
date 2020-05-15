@@ -3,22 +3,18 @@
     <div class="input-group" class="takkar">
     <h3 class="red">GameBoy Tölvur
         <div class="dropdown" style="float: right; margin-left: 10px;">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Raða eftir:
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="/order_gameboy_computer_by_name">Stafrófsröð</a></li>
-            <li><a href="/order_gameboy_computer_by_price">Verði: ódýrast fremst</a></li>
-          </ul>
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Raða eftir:<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="/order_gameboy_computer_by_name">Stafrófsröð</a></li>
+                <li><a href="/order_gameboy_computer_by_price">Verði: ódýrast fremst</a></li>
+             </ul>
         </div>
-        </h3>
+    </h3>
     </div>
-
-
     <div class="computers">
-    {% for product in products %}
-        {% include 'products/single_product.html' with product=product %}
-    {% endfor %}
+        {% for product in products %}
+            {% include 'products/single_product.html' with product=product %}
+        {% endfor %}
     </div>
 {% endblock %}

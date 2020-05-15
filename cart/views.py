@@ -28,7 +28,7 @@ def add_to_cart(request, id):
 
         new_cart = Cart(user=u, products=p,quantity=1)
         new_cart.save()
-    context = {}
+        context = {}
 
     return redirect(index)
 
@@ -37,7 +37,6 @@ def add_to_cart(request, id):
 def remove_from_cart(request,id):
     '''this is our remover from cart function. It removes a product from the
     cart.'''
-
     p = products.objects.filter(pk=id).first()
     u = User.objects.filter(pk=request.user.id).first()
     cart = Cart.objects.filter(user=u, products=p).first()
