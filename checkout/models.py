@@ -7,6 +7,7 @@ from products.models import products
 
 
 def zip_info(value):
+    '''this is a function that validates the zip info'''
     try:
         int(value)
     except ValueError:
@@ -26,10 +27,12 @@ class personal_info(models.Model):
     zip = models.CharField(max_length=255,validators=[zip_info])
 
 def card_num(value):
+    '''this is a function that validates the cardnumber that the user inputs'''
     if len(str(value)) != 16:
         raise ValidationError('Kortanúmer verður að vera af lengd 16')
 
 def cvc_num(value):
+    '''this is a function that validates the CVC that the user inputs'''
     if len(str(value)) != 3:
         raise ValidationError('CVC verður að vera af lengd 3')
 
@@ -46,7 +49,7 @@ class payment(models.Model):
     cvc = models.CharField(max_length=3,validators=[cvc_num])
 
 class Order(models.Model):
-    '''this is our oredr model'''
+    '''this is our order model'''
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     info = models.ForeignKey(personal_info, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
@@ -54,6 +57,7 @@ class Order(models.Model):
     payment = models.ForeignKey(payment, on_delete=models.CASCADE)
 
 class Order_item(models.Model):
+    '''this is the model that saves the products in orders'''
     products = models.ForeignKey(products, on_delete=models.DO_NOTHING)
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=0)

@@ -2,84 +2,82 @@
 {% block content %}
     <div id="header-review"><h1>Yfirlit yfir pöntun</h1>
     <hr>
-  <div class="row">
-    <div class="col-lg-6">
-        <div class="box-element box">
-            <form id="form">
-                <div id="pers_info" >
-                    <h3>Upplýsingar um kaupanda:</h3>
-                    <div class="tab">
-                       <p> <b>Nafn:</b> {{ pers_info.name }} </p>
-                        <p><b>Götuheiti:</b> {{ pers_info.street_name }} </p>
-                        <p><b>Húsnúmer:</b> {{ pers_info.house_num }} </p>
-                       <p> <b>Land:</b> {{ pers_info.country }} </p>
-                       <p> <b>Bæjarfélag:</b> {{ pers_info.city }} </p>
-                       <p> <b>Póstnúmer:  </b>{{ pers_info.zip }} </p>
-                    </div>
-                    <hr>
-
-                </div>
-                <div id="paym_info" >
-                    <div class="my_table">
-                        <table class="table">
-                            <head>
-                    <h3>Kortaupplýsingar:</h3>
-                                </head>
-                    <div class="tab">
-                       <p> <b>Kortahafi: </b> {{ payment_info.cardholder }} </p>
-                        <p> <b>Kortanúmer: </b>{{ payment_info.card_num }}</p>
-                        <p> <b>exp_month: </b> {{ payment_info.exp_month }}</p>
-                        <p> <b>exp_year:  </b>{{ payment_info.exp_year }}</p>
-                    </div>
-                            </table>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="box-element box">
+                    <form id="form">
+                        <div id="pers_info" >
+                            <h3>Upplýsingar um kaupanda:</h3>
+                             <div class="tab">
+                                <p> <b>Nafn:</b> {{ pers_info.name }} </p>
+                                 <p><b>Götuheiti:</b> {{ pers_info.street_name }} </p>
+                                <p><b>Húsnúmer:</b> {{ pers_info.house_num }} </p>
+                                <p> <b>Land:</b> {{ pers_info.country }} </p>
+                                <p> <b>Bæjarfélag:</b> {{ pers_info.city }} </p>
+                                 <p> <b>Póstnúmer:  </b>{{ pers_info.zip }} </p>
+                            </div>
+                             <hr>
                         </div>
+                        <div id="paym_info" >
+                            <div class="my_table">
+                                <table class="table">
+                                    <head>
+                                    <h3>Kortaupplýsingar:</h3>
+                                    </head>
+                                    <div class="tab">
+                                        <p> <b>Kortahafi: </b> {{ payment_info.cardholder }} </p>
+                                        <p> <b>Kortanúmer: </b>{{ payment_info.card_num }}</p>
+                                        <p> <b>exp_month: </b> {{ payment_info.exp_month }}</p>
+                                        <p> <b>exp_year:  </b>{{ payment_info.exp_year }}</p>
+                                     </div>
+                                 </table>
+                             </div>
+                        </div>
+                     </form>
 
                 </div>
-            </form>
-
-        </div>
-    </div>
-  <div class="col-lg-6">
-        <div class="box-element box" >
-             <form id="form">
-                <div id="product-info">
-                    <head><h3>Vörur: </h3> </head>
-                    <br>
-                    <div class="my_table">
-                        <table class="table">
-                            <head>
-                                <th>Mynd:</th>
-                                <th>Vara:</th>
-                                <th>Fjöldi:</th>
-                                <th>Verð:</th>
-
-                            </head>
-                            {% for cart_instance in product_cart %}
-                            <tr><td><img id="product_im" class="computer-img" src="{{ cart_instance.products.product_image_set.first.image }}"/></td><td>{{ cart_instance.products.name }}</td><td>{{ cart_instance.quantity }}</td><td>{{ cart_instance.products.price }}</td>
-                            </tr>
-                            {% endfor %}
-                        <foot>
-                        <th><th><th><th><script>
-                            total_price=0
-                             new_product = 0
-                        {% for cart_instance in product_cart %}
-                        new_product = {{ cart_instance.products.price }} *{{ cart_instance.quantity }}
-                        total_price  += new_product
-                        {% endfor %}
-                        document.write("Verð samtals: " + total_price + " kr")
-                        </script></th></th></th></th>
-                        </foot>
-                        </table>
-                    </div>
-
-
+            </div>
+            <div class="col-lg-6">
+                <div class="box-element box" >
+                    <form id="form">
+                        <div id="product-info">
+                            <head><h3>Vörur: </h3> </head>
+                            <br>
+                            <div class="my_table">
+                                <table class="table">
+                                    <head>
+                                        <th>Mynd:</th>
+                                        <th>Vara:</th>
+                                        <th>Fjöldi:</th>
+                                        <th>Verð:</th>
+                                    </head>
+                                    {% for cart_instance in product_cart %}
+                                        <tr><td><img id="product_im" class="computer-img" src="{{ cart_instance.products.product_image_set.first.image }}"/></td><td>{{ cart_instance.products.name }}</td><td>{{ cart_instance.quantity }}</td><td>{{ cart_instance.products.price }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    <foot>
+                                        <th><th>
+                                        <th><th>
+                                        <script>
+                                            total_price=0
+                                            new_product = 0
+                                            {% for cart_instance in product_cart %}
+                                                new_product = {{ cart_instance.products.price }} *{{ cart_instance.quantity }}
+                                                total_price  += new_product
+                                            {% endfor %}
+                                            document.write("Verð samtals: " + total_price + " kr")
+                                         </script>
+                                        </th></th></th></th>
+                                     </foot>
+                                 </table>
+                             </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
+        <a style="float:left; margin:5px;" class="btn btn-default" href="{% url 'checkout-payment' %}" > &#x2190; Til baka</a>
+        <a style="float:right; margin:5xp;" class="btn btn-default" href="{% url 'checkout-ordered' %}">Staðfesta greiðslu</a>
     </div>
-  </div>
-     <a style="float:left; margin:5px;" class="btn btn-default" href="{% url 'checkout-payment' %}" > &#x2190; Til baka</a>
-         <a style="float:right; margin:5xp;" class="btn btn-default" href="{% url 'checkout-ordered' %}">Staðfesta greiðslu</a>
-    </div>
-    </div>
+
 {% endblock %}

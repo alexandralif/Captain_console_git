@@ -27,7 +27,7 @@ def add_to_cart(request, id):
 
         new_cart = Cart(user=u, products=p,quantity=1)
         new_cart.save()
-    context = {}
+        context = {}
 
     return redirect(index)
 

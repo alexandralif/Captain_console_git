@@ -2,37 +2,34 @@
 {% block content %}
     <h3 class="red">Tölvuleikir</h3>
     <div class="input-group" class="takkar">
-          <input type="search" class="form-control" id="search-box" placeholder="Leita"/>
+        <input type="search" class="form-control" id="search-box" placeholder="Leita"/>
             <div class="input-group-btn" style="padding-left: 5px;">
                 <button  type="button" id="search-btn" class="btn btn-default">Leita</button>
             </div>
         <div class="dropdown" style="float: right">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Raða eftir:
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="/order_games_by_name">Stafrófsröð</a></li>
-            <li><a href="/order_games_by_price">Verði: ódýrast fremst</a></li>
-          </ul>
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Raða eftir:<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="/order_games_by_name">Stafrófsröð</a></li>
+                <li><a href="/order_games_by_price">Verði: ódýrast fremst</a></li>
+            </ul>
         </div>
         <div class="dropdown" style="float:right; padding-left: 5px;">
             <button  class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Sía eftir:
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="/nintendo_games">Nintendo</a></li>
-            <li><a href="/gameboy_games">GameBoy</a></li>
-            <li><a href="/playstation_games">Playstation</a></li>
-            <li><a href="/xbox_games">Xbox</a></li>
-          </ul>
+                Sía eftir:
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="/nintendo_games">Nintendo</a></li>
+                <li><a href="/gameboy_games">GameBoy</a></li>
+                <li><a href="/playstation_games">Playstation</a></li>
+                <li><a href="/xbox_games">Xbox</a></li>
+            </ul>
         </div>
     </div>
-
     <div class="computers">
-    {% for product in products %}
-        {% include 'products/single_product.html' with product=product %}
-    {% endfor %}
+        {% for product in products %}
+            {% include 'products/single_product.html' with product=product %}
+        {% endfor %}
     </div>
 {% endblock %}

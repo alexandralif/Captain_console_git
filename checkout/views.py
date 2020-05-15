@@ -9,45 +9,39 @@ from checkout.models import payment
 from checkout.forms.personal_info_form import PersonalForm
 from products.models import products
 
-
-
-
-
 def add_personal_info(request):
-    '''this saves the personal information in the chaeckout process'''
+    '''this function saves the personal information in the checkout process'''
     profile = personal_info.objects.filter(user=request.user).first()
     if request.method == 'POST':
         form = PersonalForm(data=request.POST,instance=profile)
-        if form.is_valid():
+        if form.is_valid(): # if the form is valid then we save the it
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
-
     else:
         form = PersonalForm()
     return render(request, 'checkout/add_personal_info.html', {
         'form': form
     })
+
 def payment_info(request):
-    '''this saves the payment information in the checkout process'''
+    '''this function saves the payment information in the checkout process'''
     profile = payment.objects.filter(user=request.user).first()
     if request.method == 'POST':
         form = PaymentForm(data=request.POST, instance=profile)
-        if form.is_valid():
+        if form.is_valid(): #if the form is valid the nwe save it
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
-
     else:
         form = PaymentForm()
-
     return render(request, 'checkout/payment.html', {
         'form': form
     })
 
 
 def review(request):
-    '''this return a review of your order that you have to comferm '''
+    '''this function returns a review of your order that you have to confirm '''
     if request.method == 'GET':
         if request.user.is_authenticated:
             payment_info = payment.objects.filter(user=request.user).first()
