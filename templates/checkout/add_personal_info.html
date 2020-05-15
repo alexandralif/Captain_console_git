@@ -7,8 +7,8 @@
                    {% csrf_token %}
                    {{ form.as_p }}
                         <a style="float:left; margin:5px;" class="btn btn-default" href="{% url 'cart-index' %}" > &#x2190; Til baka</a>
-                <input type="submit"  style="float:end ; margin:5px;" value="Staðfesta upplýsingar" class="btn btn-success"/>
-                    <a style="float:right; margin: 5px;" value="Create" class="btn btn-success" href="{% url 'checkout-payment' %}"> Halda áfram</a>
+                <input type="submit"  style="float:end ; margin:5px;" value="Staðfesta upplýsingar" class="btn btn-default"/>
+                    <a style="float:right; margin: 5px;" value="Create" class="btn btn-default" href="{% url 'checkout-payment' %}"> Halda áfram</a>
 
                </form>
      </div>
