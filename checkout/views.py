@@ -55,13 +55,14 @@ def review(request):
             #items = Cart.objects.filter(user_id=request.user.id)
             pers_info = personal_info.objects.filter(user=request.user).first()
             user = User.objects.filter(pk=request.user.id).first()
-            product_cart = Cart.objects.filter(user=user)
+            product_cart = Cart.objects.filter(user=request.user)
+            #search_info = Product_history.objects.filter(user=request.user).all()
 
 
     return render(request, 'checkout/review.html', {
         'payment_info': payment_info,
         #'product_cart' :product_cart,
-        'product_cart': product_cart.order_by('products'),
+        'product_cart': product_cart,
         'pers_info': pers_info,
         #'products':get_object_or_404(products, id=reques)
     })
