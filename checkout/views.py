@@ -1,6 +1,8 @@
+from datetime import datetime
+
 from django.contrib.auth.models import User
 from django.shortcuts import render,redirect,get_object_or_404
-from checkout.models import personal_info
+from checkout.models import personal_info, Order, Order_item
 from cart.models import Cart
 from checkout.forms.payment_info import PaymentForm
 from checkout.models import payment
@@ -69,6 +71,18 @@ def review(request):
 
 
 def ordered(request):
+    if request.user.is_authenticated:
+        payment_info = payment.objects.filter(user=request.user).first()
+        pers_info = personal_info.objects.filter(user=request.user).first()
+        create_order = Order(user=request.user,info=pers_info,confirmed=True,payment=payment_info)
+        create_order.save()
+        cart = Cart.objects.filter(user=request.user)
+        for item in cart:
+            product = products.objects.get(pk=item.products.id)
+            order_product = Order_item(order_id=create_order.id,products_id=product.id,quantity=item.quantity)
+            order_product.save()
+
     Cart.objects.filter(user_id=request.user.id).delete()
+
     context = {}
     return render(request,'checkout/order_success.html',context)
