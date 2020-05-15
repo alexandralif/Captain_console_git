@@ -3,11 +3,11 @@
      <div class="account_details">
         <h1> Mínar síður</h1>
 
-        <p> Notandanafn: {{ user.username }}</p>
+        <p> <b>Notendanafn:</b> {{ user.username }}</p>
 
-         <p> Fornafn: {{ account_info.first_name }}</p>
-        <p> Eftirnafn: {{ account_info.last_name }}</p>
-         <p> Mynd: </p> <img id="computer_im" class="computer-img" src="{{ account_photo.image_set.first.image }}" />
+         <p> <b>Fornafn:</b>  {{ account_info.first_name }}</p>
+        <p> <b> Eftirnafn:</b> {{ account_info.last_name }}</p>
+         <p> <b>Mynd:</b> </p> <img id="computer_im" class="computer-img" src="{{ account_photo.image_set.first.image }}" />
 
    <!-- <form id="form">
         <div class="my_table">
