@@ -14,6 +14,7 @@ from django.contrib.auth.decorators import login_required
 
 
 def register(request):
+    '''this functions reqisters a new user'''
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
         if form.is_valid():
@@ -25,6 +26,7 @@ def register(request):
     })
 
 def get_user_by_id(request,id):
+    '''this functions gets the user by id'''
     return render(request, 'user/my_account.html', {
         'user': get_object_or_404(User, pk=id)
     })
@@ -42,6 +44,7 @@ def index(request):
 
 #@login_required
 def create_user(request):
+    '''this function creates a new user with additional info'''
     profile = account.objects.filter(user=request.user).first()
     if request.method == 'POST':
         form = ProfileCreateForm(data=request.POST, instance = profile)
@@ -62,6 +65,7 @@ def create_user(request):
 
 @login_required
 def show_user(request):
+    '''this show the users information'''
     account_info = account.objects.filter(user=request.user).first()
     account_photo = account_image.objects.filter(user=account_info).first()
 
@@ -71,6 +75,7 @@ def show_user(request):
 
 @login_required
 def order_history(request):
+    '''this show the users order history'''
     u = User.objects.filter(pk=request.user.id).first()
 
     users_order = Order.objects.filter(user=u).all()

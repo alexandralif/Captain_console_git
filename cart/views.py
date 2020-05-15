@@ -25,23 +25,18 @@ def add_to_cart(request, id):
         cart.quantity +=1 #have to expand the quantity by one
         cart.save()
     else: #if the item is not in the cart we have to add the entire item to the cart
-        #c=Cart.objects.filter(user=u,products=p,quantity=1).first()
+
         new_cart = Cart(user=u, products=p,quantity=1)
         new_cart.save()
     context = {}
-    #return render(request,'products/index.html',context)
+
     return redirect(index)
 
-   # return render(request, 'products/product_details.html', {
-#  'products': get_object_or_404(products, pk=id)
- #   })
 
 @login_required
 def remove_from_cart(request,id):
     '''this is our remover from cart function. It removes a product from the
     cart.'''
-    #cart_item= get_object_or_404(cart,pk=id)
-    #cart_item.delete()
 
     p = products.objects.filter(pk=id).first()
     u = User.objects.filter(pk=request.user.id).first()
@@ -56,20 +51,17 @@ def remove_from_cart(request,id):
         cart.save()
     else:      #else we have to delet the entire item from the cart
         cart.delete()
-    #return render(request, 'cart/index.html', {
-    #    'products': get_object_or_404(products, pk=id)
-    #})
+
     return redirect(index)
-    #return render(request, 'products/product_details.html', {
-     #   'products': get_object_or_404(products, pk=id)
-    #})
 
 
 @login_required
 def clear_cart(request):
-        Cart.objects.filter(user_id=request.user.id).delete()
-        context = {}
-        return render(request, 'cart/index.html', context)
+    '''this is our clear cart function. It clears the cart when the order is comfermed.'''
+
+    Cart.objects.filter(user_id=request.user.id).delete()
+    context = {}
+    return render(request, 'cart/index.html', context)
 
 
 
