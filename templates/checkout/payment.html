@@ -6,11 +6,11 @@
     <form class="form form-horizontal" action="{% url 'checkout-payment'%}"method="post">
                    {% csrf_token %}
                    {{ form.as_p }}
-                        <a style="float:left; margin:5px;" class="btn btn-primary" href="{% url 'checkout-add_personal_info' %}" > &#x2190; Til baka</a>
+                        <a style="float:left; margin:5px;" class="btn btn-default" href="{% url 'checkout-add_personal_info' %}" > &#x2190; Til baka</a>
 
-                <input type="submit"  style="float:end ; margin:5px;" value="Staðfesta upplýsingar"  onclick="enableButton()" class="btn btn-success"/>
+                <input type="submit"  style="float:end ; margin:5px;" value="Staðfesta upplýsingar"  onclick="enableButton()" class="btn btn-default"/>
                     <div id="keep_going_button">
-                    <a style="float:right; margin: 5px;" value="Create" class="btn btn-success" href="{% url 'checkout-review' %}"> Halda áfram</a>
+                    <a style="float:right; margin: 5px;" value="Create" class="btn btn-default" href="{% url 'checkout-review' %}"> Halda áfram</a>
                         </div>
                </form>
     </div>
